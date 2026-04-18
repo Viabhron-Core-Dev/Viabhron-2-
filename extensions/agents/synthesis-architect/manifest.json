@@ -1,0 +1,11 @@
+{
+  "name": "The Synthesis Architect",
+  "id": "synthesis-architect",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Synthesis LLM",
+  "mission": "Orchestration of diverse data streams and multi-agent output merging.",
+  "permissions": ["data-merging", "context-stitching", "unified-output"]
+}

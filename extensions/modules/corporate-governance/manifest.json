@@ -1,0 +1,12 @@
+{
+  "name": "Corporate Governance Hub",
+  "description": "Strategic roadmap management and multi-cloud token treasury with ratification gates.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "roadmap_management",
+    "treasury_oversight",
+    "ratification_control"
+  ],
+  "mission": "To provide high-level technology oversight and strategic governance for the OS."
+}

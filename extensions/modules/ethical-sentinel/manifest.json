@@ -1,0 +1,12 @@
+{
+  "name": "Ethical Sentinel",
+  "description": "Safety-by-design and child safety compliance with local classifiers and secure safety proxies.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "content_filtering",
+    "ethical_alignment",
+    "safety_proxy"
+  ],
+  "mission": "To ensure all OS actions and content remain within ethical and safety guardrails."
+}

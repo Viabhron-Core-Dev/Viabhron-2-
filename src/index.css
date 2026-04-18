@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --accent-500: #0A192F; /* Deep Space Blue */
+    --accent-400: #172A45;
+    --accent-300: #303C55;
+    --accent-200: #64FFDA; /* Neon Teal for electricity/accents */
+    --accent-500-rgb: 10, 25, 47;
+    --wa-dark-bg: #0B141A;
+    --wa-header: #5D5FEF; /* Vibrant Purple/Indigo from images */
+    --wa-banner: #727CF5;
+    --wa-sent: #005C4B;
+    --wa-received: #F0F2F5;
+    --wa-accent: #7C3AED; /* Omega FAB color */
+    --wa-secondary: #5D5FEF;
+  }
+
+  .bg-wa-dark { background-color: var(--wa-dark-bg); }
+  .bg-wa-header { background-color: var(--wa-header); }
+  .bg-wa-banner { background-color: var(--wa-banner); }
+  .bg-wa-sent { background-color: var(--wa-sent); }
+  .bg-wa-received { background-color: var(--wa-received); }
+  .bg-wa-accent { background-color: var(--wa-accent); }
+  .text-wa-accent { color: var(--wa-accent); }
+  .border-wa-accent { border-color: var(--wa-accent); }
+
+  .electricity-grid {
+    background-image: 
+      linear-gradient(rgba(100, 255, 218, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(100, 255, 218, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    position: relative;
+  }
+
+  .electricity-grid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, var(--wa-dark-bg) 80%);
+    pointer-events: none;
+  }
+
+  .star-node {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--accent-200);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-200);
+    animation: twinkle 3s infinite ease-in-out;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+  }
+
+  .text-accent { color: var(--accent-500); }
+  .text-accent-300 { color: var(--accent-300); }
+  .bg-accent { background-color: var(--accent-500); }
+  .bg-accent-light { background-color: rgba(var(--accent-500-rgb), 0.1); }
+  .border-accent { border-color: rgba(var(--accent-500-rgb), 0.2); }
+  .ring-accent { --tw-ring-color: var(--accent-500); }
+  .selection-accent::selection { background-color: rgba(var(--accent-500-rgb), 0.2); }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/90 backdrop-blur-md border border-slate-200;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .light-dotted-grid {
+    background-image: radial-gradient(circle at 1px 1px, #E2E8F0 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+  
+  .node-shadow {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}

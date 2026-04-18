@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign Identity & 8004 Protocol",
+  "description": "On-chain agent identity and multi-chain accreditation supporting TRON, BNB, and Ethereum.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "identity_management",
+    "on_chain_verification",
+    "passport_issuance"
+  ],
+  "mission": "To provide a secure, verifiable identity substrate for all agents."
+}

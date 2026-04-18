@@ -1,0 +1,12 @@
+{
+  "name": "Parallel Forge (Fleet Commander)",
+  "description": "Fleet-scale agent development in isolated sandboxes with tactical mapping.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "fleet_management",
+    "sandbox_orchestration",
+    "virtual_desktop_access"
+  ],
+  "mission": "To enable the parallel development and training of massive agent fleets."
+}

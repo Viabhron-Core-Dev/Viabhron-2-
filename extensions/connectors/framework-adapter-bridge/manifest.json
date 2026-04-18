@@ -1,0 +1,14 @@
+{
+  "id": "framework-adapter-bridge",
+  "name": "Framework Adapter Bridge",
+  "description": "Translation and execution of external AI framework logic (LangChain, CrewAI) within sovereign bulkheads.",
+  "type": "connector",
+  "author": "Viabhron Core",
+  "version": "1.0.0",
+  "capabilities": [
+    "framework_translation",
+    "ss_transpilation",
+    "bulkhead_orchestration",
+    "metabolic_loop_guard"
+  ]
+}

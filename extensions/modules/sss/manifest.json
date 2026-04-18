@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign Swarm Simulator (SSS)",
+  "description": "Multi-agent scenario testing in Digital Twin environments with isolated simulation sandboxes.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "swarm_simulation",
+    "scenario_testing",
+    "digital_twin_orchestration"
+  ],
+  "mission": "To simulate and test large-scale agentic behavior in safe environments."
+}

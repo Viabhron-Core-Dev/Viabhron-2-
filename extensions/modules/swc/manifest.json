@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign Weight-Check (SWC)",
+  "description": "Auditing model weights and checking for bias with cryptographic verification of integrity.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "weight_auditing",
+    "bias_detection",
+    "cryptographic_verification"
+  ],
+  "mission": "To ensure the integrity and neutrality of the OS's intelligence engines."
+}

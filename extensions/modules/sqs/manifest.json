@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign Quantum Substrate (SQS)",
+  "description": "High-performance compute layer for complex simulations with advanced cryptography.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "high_performance_compute",
+    "quantum_cryptography",
+    "simulation_orchestration"
+  ],
+  "mission": "To provide a high-density compute layer for the OS's most complex tasks."
+}

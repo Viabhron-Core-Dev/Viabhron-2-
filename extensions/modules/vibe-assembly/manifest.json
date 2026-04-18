@@ -1,0 +1,12 @@
+{
+  "name": "Vibe-Assembly (Component Orchestrator)",
+  "description": "Component-based orchestration layer for AI-driven development using pre-validated Hardened Blocks.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "component_orchestration",
+    "manifest_compilation",
+    "block_management"
+  ],
+  "mission": "To provide a secure, high-level paradigm for AI-native development."
+}

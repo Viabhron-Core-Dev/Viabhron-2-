@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign I/O Bridge (Arduino)",
+  "description": "Hardware interfacing for physical IoT nodes with voice-controlled mission command.",
+  "version": "1.0.0",
+  "category": "connector",
+  "permissions": [
+    "hardware_access",
+    "iot_orchestration",
+    "voice_command_integration"
+  ],
+  "mission": "To bridge the digital OS with the physical world through hardware nodes."
+}

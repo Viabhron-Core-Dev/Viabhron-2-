@@ -1,0 +1,12 @@
+{
+  "name": "Global Security Radar",
+  "description": "Proactive local scanning against global CVE/NVD databases with privacy-first matching.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "vulnerability_scanning",
+    "cve_database_access",
+    "sovereign_patching"
+  ],
+  "mission": "To proactively defend the OS against global security threats."
+}

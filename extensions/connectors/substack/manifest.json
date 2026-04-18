@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign Publishing Hub (Substack)",
+  "description": "Content management and ratified newsletter publishing with local backups.",
+  "version": "1.0.0",
+  "category": "connector",
+  "permissions": [
+    "content_publishing",
+    "newsletter_management",
+    "ratification_gate"
+  ],
+  "mission": "To manage the OS's public communication and narrative publishing."
+}

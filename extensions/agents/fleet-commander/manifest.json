@@ -1,0 +1,11 @@
+{
+  "name": "The Fleet Commander",
+  "id": "fleet-commander",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "consultant",
+  "level": 4,
+  "brain": "Orchestration LLM",
+  "mission": "Fleet-scale agent development and parallel orchestration.",
+  "permissions": ["fleet-orchestration", "parallel-forge-management", "agent-training"]
+}

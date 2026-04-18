@@ -1,0 +1,8 @@
+{
+  "id": "svh",
+  "name": "Sovereign Vine Hardener (SVH)",
+  "version": "1.0.0",
+  "description": "Security hardening for distributed 'Vine' nodes and zero-trust verification.",
+  "category": "module",
+  "status": "active"
+}

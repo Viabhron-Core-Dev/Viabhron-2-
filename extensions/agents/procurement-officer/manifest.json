@@ -1,0 +1,11 @@
+{
+  "name": "The Procurement Officer",
+  "id": "procurement-officer",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Resource LLM",
+  "mission": "Management of external resources, API subscriptions, and service procurement.",
+  "permissions": ["resource-management", "procurement", "vendor-liaison"]
+}

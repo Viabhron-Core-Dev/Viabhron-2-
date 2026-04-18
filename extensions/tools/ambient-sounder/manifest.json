@@ -1,0 +1,9 @@
+{
+  "name": "Ambient Sounder",
+  "id": "ambient-sounder",
+  "version": "1.0.0",
+  "description": "Natural Text-to-Speech (TTS) engine for eyes-free interaction.",
+  "category": "tool",
+  "permissions": ["audio-output"],
+  "entry": "index.ts"
+}

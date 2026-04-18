@@ -1,0 +1,11 @@
+{
+  "name": "The Librarian",
+  "id": "librarian",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Narrative LLM",
+  "mission": "Narrative synthesis and data trading within the Viabhron Nexus.",
+  "permissions": ["narrative-synthesis", "nexus-data-trading", "neural-archive-management"]
+}

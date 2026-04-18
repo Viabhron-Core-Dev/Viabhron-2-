@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  # The MAOS Office (Your App)
+  office:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - LLM_ENDPOINT=http://llm:11434
+    depends_on:
+      - llm
+
+  # The Private LLM (Ollama)
+  llm:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+volumes:
+  ollama_data:

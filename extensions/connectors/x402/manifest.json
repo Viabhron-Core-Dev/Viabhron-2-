@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign x402 Payment Gateway",
+  "description": "Autonomous, consumption-based billing for AI services with metabolic breakers and dynamic treasury management.",
+  "version": "1.0.0",
+  "category": "connector",
+  "permissions": [
+    "treasury_management",
+    "metabolic_monitoring",
+    "ledger_access"
+  ],
+  "mission": "To enable autonomous fiscal sovereignty for the Viabhron OS."
+}

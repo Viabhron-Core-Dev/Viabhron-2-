@@ -1,0 +1,12 @@
+{
+  "name": "Ghost Implementation (Shadow Workflows)",
+  "description": "Safe execution of complex tasks in isolated Shadow Sandboxes with Unified Ghost Diff review.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "shadow_sandbox_access",
+    "diff_review",
+    "reality_merging"
+  ],
+  "mission": "To provide a safe, controlled environment for autonomous implementation."
+}

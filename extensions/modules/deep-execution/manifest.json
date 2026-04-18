@@ -1,0 +1,12 @@
+{
+  "name": "Deep Execution Substrate (The Hands)",
+  "description": "Autonomous shell execution and file editing in hardened environments with self-healing logic.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "shell_execution",
+    "file_editing",
+    "self_healing_code"
+  ],
+  "mission": "To provide the OS with autonomous implementation capabilities."
+}

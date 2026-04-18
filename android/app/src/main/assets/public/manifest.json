@@ -1,0 +1,21 @@
+{
+  "name": "Viabhron Sovereign OS",
+  "short_name": "Viabhron",
+  "description": "A private, portable AI Operating System for sovereign orchestration.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/viabhron/192/192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://picsum.photos/seed/viabhron/512/512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

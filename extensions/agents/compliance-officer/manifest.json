@@ -1,0 +1,11 @@
+{
+  "name": "The Compliance Officer",
+  "id": "compliance-officer",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Safety LLM",
+  "mission": "Ethical alignment and safety-by-design protocols.",
+  "permissions": ["ethical-alignment", "safety-audit", "content-safety"]
+}

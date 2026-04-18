@@ -1,0 +1,11 @@
+{
+  "name": "The Swarm Architect",
+  "id": "swarm-architect",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Swarm LLM",
+  "mission": "Orchestration of large-scale multi-agent swarms and collective behavior.",
+  "permissions": ["swarm-orchestration", "swarm-intelligence", "consensus-logic"]
+}

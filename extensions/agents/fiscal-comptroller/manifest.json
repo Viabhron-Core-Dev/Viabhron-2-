@@ -1,0 +1,11 @@
+{
+  "name": "The Fiscal Comptroller",
+  "id": "fiscal-comptroller",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "executive",
+  "level": 2,
+  "brain": "Specialized Financial LLM",
+  "mission": "Autonomous budget management, x402 payment processing, and metabolic monitoring.",
+  "permissions": ["x402-processing", "budget-management", "metabolic-monitoring"]
+}

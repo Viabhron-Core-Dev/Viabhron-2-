@@ -1,0 +1,21 @@
+{
+  "id": "sovereign-threat-intel",
+  "name": "Sovereign Threat Intelligence (STI) Bridge",
+  "description": "Proactive defense via MITRE ATT&CK/ATLAS ingestion and resonance filtering.",
+  "type": "connector",
+  "author": "Viabhron Core",
+  "version": "1.0.0",
+  "capabilities": [
+    "mitre_scanning",
+    "resonance_filtering",
+    "sentinel_advisory_issuance",
+    "compliance_audit"
+  ],
+  "config": {
+    "alertThreshold": {
+      "type": "number",
+      "default": 7,
+      "description": "The resonance score (1-10) above which a threat triggers a Sentinel Advisory."
+    }
+  }
+}

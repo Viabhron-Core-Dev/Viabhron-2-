@@ -1,0 +1,12 @@
+{
+  "name": "Mistral Sovereign Forge",
+  "description": "Specialized substrate for Mistral model fine-tuning and deployment with local training loops.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "model_fine_tuning",
+    "local_training",
+    "mistral_deployment"
+  ],
+  "mission": "To provide a dedicated environment for the Mistral intelligence family."
+}

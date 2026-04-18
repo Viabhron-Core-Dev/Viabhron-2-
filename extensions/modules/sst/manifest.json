@@ -1,0 +1,8 @@
+{
+  "id": "sst",
+  "name": "Sovereign Substrate Tuner (SST)",
+  "version": "1.0.0",
+  "description": "Performance optimization and resource allocation based on task complexity.",
+  "category": "module",
+  "status": "active"
+}

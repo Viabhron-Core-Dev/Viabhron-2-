@@ -1,0 +1,11 @@
+{
+  "name": "The Enterprise Liaison",
+  "id": "enterprise-liaison",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Corporate LLM",
+  "mission": "Integration with corporate systems, legacy databases, and external business partners.",
+  "permissions": ["corporate-integration", "legacy-bridge", "compliance-mapping"]
+}

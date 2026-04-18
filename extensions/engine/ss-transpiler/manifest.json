@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign-Script (SS) Transpiler",
+  "description": "Converting declarative intent manifests into functional code using block-based assembly.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "script_transpilation",
+    "block_assembly",
+    "security_hardening"
+  ],
+  "mission": "Converting declarative intent manifests into functional code using block-based assembly."
+}

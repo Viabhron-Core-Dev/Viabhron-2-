@@ -1,0 +1,11 @@
+{
+  "name": "MCP Substrates",
+  "description": "Model Context Protocol servers for standardized data and tool access.",
+  "version": "1.0.0",
+  "category": "mcp",
+  "permissions": [
+    "mcp_protocol_access",
+    "local_substrate_discovery"
+  ],
+  "mission": "To provide a standardized, interoperable layer for agent-to-data communication."
+}

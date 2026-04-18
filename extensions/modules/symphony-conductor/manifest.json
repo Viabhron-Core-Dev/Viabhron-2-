@@ -1,0 +1,12 @@
+{
+  "name": "The Symphony Conductor",
+  "description": "Master agent for orchestrating Symphony implementation runs with high-level task decomposition.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "task_decomposition",
+    "agent_coordination",
+    "implementation_oversight"
+  ],
+  "mission": "To provide master orchestration for autonomous implementation missions."
+}

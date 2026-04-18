@@ -1,0 +1,25 @@
+{
+  "id": "sovereign-agent-forge",
+  "name": "Sovereign Agent Forge",
+  "description": "Plain-English synthesis of custom agents using Sovereign-Script (SS) and Hardened Blocks.",
+  "type": "module",
+  "author": "Viabhron Core",
+  "version": "1.0.0",
+  "capabilities": [
+    "agent_synthesis",
+    "ss_manifest_generation",
+    "block_binding",
+    "metabolic_oversight"
+  ],
+  "config": {
+    "defaultSubstrate": {
+      "type": "select",
+      "options": ["cloudflare_worker", "vine_node", "local_anchor"],
+      "default": "cloudflare_worker"
+    },
+    "autoRatification": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

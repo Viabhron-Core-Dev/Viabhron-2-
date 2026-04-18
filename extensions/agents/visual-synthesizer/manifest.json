@@ -1,0 +1,11 @@
+{
+  "name": "The Visual Synthesizer",
+  "id": "visual-synthesizer",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Visual Prompt LLM",
+  "mission": "Prompt engineering and visual composition for image and video assets.",
+  "permissions": ["prompt-engineering", "visual-composition", "asset-consistency"]
+}

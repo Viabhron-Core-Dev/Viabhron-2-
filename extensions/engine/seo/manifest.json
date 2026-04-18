@@ -1,0 +1,8 @@
+{
+  "id": "seo",
+  "name": "Sovereign Engine Orchestrator",
+  "version": "1.0.0",
+  "description": "Master management of engine-level logic and substrate orchestration.",
+  "category": "engine",
+  "status": "active"
+}

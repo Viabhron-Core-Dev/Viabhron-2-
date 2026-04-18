@@ -1,0 +1,11 @@
+{
+  "name": "The Uni-1 Visual Architect",
+  "id": "visual-architect",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Luma Uni-1",
+  "mission": "Unified image generation and reasoning using Luma Uni-1.",
+  "permissions": ["visual-synthesis", "reasoning-trace"]
+}

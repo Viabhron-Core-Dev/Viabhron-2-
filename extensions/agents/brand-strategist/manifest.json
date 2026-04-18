@@ -1,0 +1,11 @@
+{
+  "name": "The Brand Strategist",
+  "id": "brand-strategist",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Marketing LLM",
+  "mission": "Passive brand monitoring and AI search visibility (Trustpilot).",
+  "permissions": ["brand-monitoring", "visibility-pulse"]
+}

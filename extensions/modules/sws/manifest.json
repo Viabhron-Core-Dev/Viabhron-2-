@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign Web Shield (SWS)",
+  "description": "Advanced protection against web-based AI attacks with air-gapped scraping and diff analysis.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "web_protection",
+    "air_gapped_scraping",
+    "attack_analysis"
+  ],
+  "mission": "To defend the OS against malicious web-based AI manipulation."
+}

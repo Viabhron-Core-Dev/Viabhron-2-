@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign Event Bus (SEB)",
+  "description": "Standardized inter-agent and inter-extension communication with a pub/sub architecture.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "event_orchestration",
+    "pub_sub_communication",
+    "agent_messaging"
+  ],
+  "mission": "To provide a unified communication backbone for the entire OS."
+}

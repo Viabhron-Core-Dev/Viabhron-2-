@@ -1,0 +1,12 @@
+{
+  "name": "Governed Agent Catalog (Agent Registry)",
+  "description": "Centralized registry for agents, tools, and MCP servers with CloudTrail-style audit trails.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "registry_management",
+    "audit_logging",
+    "mcp_support"
+  ],
+  "mission": "To maintain a secure and audited catalog of all OS intelligence assets."
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Quantum Ops Bridge",
+  "id": "quantum-ops-bridge",
+  "version": "1.0.0",
+  "description": "Orchestration of Quantum-as-a-Service (QaaS) and local quantum simulation.",
+  "category": "connector",
+  "permissions": ["quantum-compute"],
+  "entry": "index.ts"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "smonitor-protocol",
+  "name": "Sovereign Monitor Protocol (SMP)",
+  "version": "1.0.0",
+  "description": "Distributed telemetry and pulse-checking substrate for real-time system health monitoring.",
+  "category": "module",
+  "status": "active"
+}

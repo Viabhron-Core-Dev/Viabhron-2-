@@ -1,0 +1,12 @@
+{
+  "name": "Device Intelligence (Fingerprint MCP)",
+  "description": "Hardware-level device verification and biometric passkeys with secure enclave integration.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "hardware_verification",
+    "biometric_access",
+    "secure_enclave_integration"
+  ],
+  "mission": "To bind the OS's identity to physical hardware security."
+}

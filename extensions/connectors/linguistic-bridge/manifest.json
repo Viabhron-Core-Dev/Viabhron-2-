@@ -1,0 +1,9 @@
+{
+  "name": "Linguistic Bridge",
+  "id": "linguistic-bridge",
+  "version": "1.0.0",
+  "description": "Universal gateway for local LLMs (Ollama, LM Studio) and OpenAI-compatible APIs.",
+  "category": "connector",
+  "permissions": ["network-access", "llm-interaction"],
+  "entry": "index.ts"
+}

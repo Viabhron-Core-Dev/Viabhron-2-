@@ -1,0 +1,12 @@
+{
+  "name": "Franchise Seed (One-Click Deployment)",
+  "description": "Rapid deployment of new Viabhron instances using Sovereign Infrastructure Manifests.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "cloud_provisioning",
+    "infrastructure_manifesting",
+    "one_click_deployment"
+  ],
+  "mission": "To enable the rapid expansion and scaling of the Viabhron ecosystem."
+}

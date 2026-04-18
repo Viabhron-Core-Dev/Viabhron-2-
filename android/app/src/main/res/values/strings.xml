@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Viabhron</string>
+    <string name="title_activity_main">Viabhron</string>
+    <string name="package_name">com.viabhron.maos</string>
+    <string name="custom_url_scheme">com.viabhron.maos</string>
+</resources>

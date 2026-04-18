@@ -1,0 +1,28 @@
+{
+  "id": "sovereign-academy-bridge",
+  "name": "Sovereign Academy Bridge",
+  "description": "Private, agent-led educational environment for competitive exams and certifications.",
+  "type": "connector",
+  "author": "Viabhron Core",
+  "version": "1.0.0",
+  "capabilities": [
+    "vetted_content_ingestion",
+    "metabolic_learning_generation",
+    "private_weak_spot_analysis",
+    "pulse_fragment_injection"
+  ],
+  "config": {
+    "primaryExam": {
+      "type": "string",
+      "default": "NEET UG",
+      "enum": ["NEET UG", "JEE Main", "SAT", "UPSC", "Custom"],
+      "description": "The primary exam or certification being targeted."
+    },
+    "learningIntensity": {
+      "type": "string",
+      "default": "balanced",
+      "enum": ["casual", "balanced", "intense"],
+      "description": "Determines the frequency and depth of learning sessions."
+    }
+  }
+}

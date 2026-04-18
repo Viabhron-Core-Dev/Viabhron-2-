@@ -1,0 +1,12 @@
+{
+  "name": "Advanced OpenClaw Prototype",
+  "description": "Autonomous self-expansion and 24/7 metabolic heartbeats with Hatchery engine integration.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "self_expansion",
+    "metabolic_heartbeat",
+    "hatchery_orchestration"
+  ],
+  "mission": "To enable the OS to autonomously grow and optimize its own substrate."
+}

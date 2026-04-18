@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign Dispatch (SD)",
+  "description": "Task routing and load balancing based on agent clearance and availability.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "task_routing",
+    "load_balancing",
+    "clearance_verification"
+  ],
+  "mission": "To intelligently route missions to the most qualified agents."
+}

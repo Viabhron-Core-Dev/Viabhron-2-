@@ -1,0 +1,25 @@
+{
+  "id": "sovereign-social-sandbox",
+  "name": "Sovereign Social Sandbox",
+  "description": "Isolated digital bulkhead for secure, federated social interaction (Chat & Channels) via Sovereign URIs.",
+  "type": "module",
+  "author": "Viabhron Core",
+  "version": "1.0.0",
+  "capabilities": [
+    "federated_chat",
+    "sovereign_channels",
+    "diplomatic_handshake",
+    "bulkhead_isolation"
+  ],
+  "config": {
+    "isolationLevel": {
+      "type": "select",
+      "options": ["standard", "strict", "maximum"],
+      "default": "maximum"
+    },
+    "autoSanitization": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "The Registry Steward",
+  "id": "registry-steward",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Catalog LLM",
+  "mission": "Management of the Governed Agent Catalog.",
+  "permissions": ["catalog-management", "audit-trail-logging"]
+}

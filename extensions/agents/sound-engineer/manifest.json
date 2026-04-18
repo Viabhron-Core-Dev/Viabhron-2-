@@ -1,0 +1,11 @@
+{
+  "name": "The Sound Engineer",
+  "id": "sound-engineer",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Audio LLM",
+  "mission": "Music theory, arrangement, and audio synthesis.",
+  "permissions": ["audio-synthesis", "music-theory", "vibe-manifesting"]
+}

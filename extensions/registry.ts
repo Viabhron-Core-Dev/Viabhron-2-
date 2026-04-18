@@ -1,0 +1,137 @@
+import { Extension } from '../src/types';
+import { 
+  githubConnector, 
+  linearConnector, 
+  cqConnector, 
+  huggingFaceConnector, 
+  gmailConnector, 
+  slackConnector,
+  x402Connector,
+  trustpilotConnector,
+  arduinoConnector,
+  flowiseConnector,
+  substackConnector,
+  lumaUni1Connector
+} from './connectors';
+import { globalPulseSkill, docForgeSkill, artifactSandboxSkill, codeHunterSkill, socialSentinelSkill, githubSecurityAuditorSkill, creativeDirectorSkill } from './skills';
+import { headlessBrowserTool, pdfExtractorTool, codeParserTool } from './tools';
+import { localDatabaseMcp, systemMetricsMcp, geminiApiDocsMcp, googleWorkspaceMcp, openClawProtocol } from './mcp';
+import { 
+  agentTerminalModule, 
+  systemMetricsModule, 
+  simulationEngineModule, 
+  governanceToolkitModule, 
+  vibeForgeModule, 
+  agentCliModule, 
+  sentinelGuardianModule,
+  sovereignCreativeStudioModule,
+  viabhronNexusModule,
+  symphonyModule,
+  soundForgeModule,
+  imageStudioModule,
+  videoSuiteModule,
+  mossSystemModule,
+  identity8004Module,
+  securityRadarModule,
+  agentRegistryModule,
+  smonitorProtocolModule,
+  linguisticBridgeModule,
+  memoryPalaceModule,
+  verificationLoopModule,
+  eventBusModule,
+  dispatchModule,
+  deepExecutionModule,
+  ethicalSentinelModule,
+  webReconShieldModule,
+  vibeAssemblyModule,
+} from './modules';
+import {
+  cloudManagerAgent,
+  fiscalComptrollerAgent,
+  identityRegistrarAgent,
+  sentinelAgent,
+  adversarialAuditorAgent,
+  swarmArchitectAgent,
+  linguisticEngineerAgent,
+  chiefEditorAgent,
+  soundEngineerAgent,
+  visualSynthesizerAgent
+} from './agents';
+
+export const INITIAL_EXTENSIONS: Extension[] = [
+  // Connectors
+  githubConnector,
+  linearConnector,
+  cqConnector,
+  huggingFaceConnector,
+  gmailConnector,
+  slackConnector,
+  x402Connector,
+  trustpilotConnector,
+  arduinoConnector,
+  flowiseConnector,
+  substackConnector,
+  lumaUni1Connector,
+  
+  // Skills
+  globalPulseSkill,
+  docForgeSkill,
+  artifactSandboxSkill,
+  codeHunterSkill,
+  socialSentinelSkill,
+  githubSecurityAuditorSkill,
+  creativeDirectorSkill,
+  
+  // Tools
+  headlessBrowserTool,
+  pdfExtractorTool,
+  codeParserTool,
+
+  // MCP Servers
+  localDatabaseMcp,
+  systemMetricsMcp,
+  geminiApiDocsMcp,
+  googleWorkspaceMcp,
+  openClawProtocol,
+
+  // Modules
+  agentTerminalModule,
+  systemMetricsModule,
+  simulationEngineModule,
+  governanceToolkitModule,
+  vibeForgeModule,
+  agentCliModule,
+  sentinelGuardianModule,
+  sovereignCreativeStudioModule,
+  viabhronNexusModule,
+  symphonyModule,
+  soundForgeModule,
+  imageStudioModule,
+  videoSuiteModule,
+  mossSystemModule,
+  identity8004Module,
+  securityRadarModule,
+  agentRegistryModule,
+  smonitorProtocolModule,
+  linguisticBridgeModule,
+  memoryPalaceModule,
+  verificationLoopModule,
+  eventBusModule,
+  dispatchModule,
+  deepExecutionModule,
+  ethicalSentinelModule,
+  webReconShieldModule,
+  vibeAssemblyModule,
+
+  // Agents
+  cloudManagerAgent,
+  fiscalComptrollerAgent,
+  identityRegistrarAgent,
+  sentinelAgent,
+  adversarialAuditorAgent,
+  swarmArchitectAgent,
+  linguisticEngineerAgent,
+  chiefEditorAgent,
+  soundEngineerAgent,
+  visualSynthesizerAgent,
+];

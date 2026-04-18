@@ -1,0 +1,10 @@
+{
+  "id": "vaa-client",
+  "name": "Vaa (VhatsAppeningAi)",
+  "version": "1.0.0",
+  "description": "The primary hybrid VAA and Browser UI client for Viabhron OS.",
+  "author": "Viabhron",
+  "entry": "index.ts",
+  "category": "client",
+  "capabilities": ["chat", "news", "workflow", "extensions"]
+}

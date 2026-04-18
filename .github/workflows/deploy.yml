@@ -1,0 +1,40 @@
+name: Deploy to Cloud Run
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Authenticate with Google Cloud
+        # CRITICAL: You must add GCP_SA_KEY and GCP_PROJECT_ID to your GitHub Repository Secrets
+        # Go to Settings > Secrets and variables > Actions > New repository secret
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Build and Push Docker Image
+        run: |
+          # Ensure the repository exists
+          gcloud artifacts repositories create viabhron \
+            --repository-format=docker \
+            --location=us-central1 \
+            --description="Viabhron OS Images" \
+            --quiet || true
+            
+          gcloud auth configure-docker us-central1-docker.pkg.dev
+          docker build -t us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/viabhron/office:latest .
+          docker push us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/viabhron/office:latest
+
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy viabhron-office \
+            --image us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/viabhron/office:latest \
+            --platform managed \
+            --region us-central1 \
+            --allow-unauthenticated

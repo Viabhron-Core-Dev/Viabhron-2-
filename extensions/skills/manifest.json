@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign Skills",
+  "description": "Advanced agentic behaviors and deep intelligence capabilities.",
+  "version": "1.0.0",
+  "category": "skill",
+  "permissions": [
+    "intelligence_hub_access",
+    "neural_archive_read",
+    "external_api_proxy"
+  ],
+  "mission": "To empower agents with specialized knowledge and analytical depth for complex missions."
+}

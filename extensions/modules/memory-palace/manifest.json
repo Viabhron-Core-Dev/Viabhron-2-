@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign Memory Palace (SMP)",
+  "description": "Advanced relational knowledge graph with resonance-based indexing and context-aware retrieval.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "knowledge_graph_access",
+    "resonance_indexing",
+    "context_retrieval"
+  ],
+  "mission": "To transform the OS vault into a living, relational memory."
+}

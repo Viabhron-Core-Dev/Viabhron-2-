@@ -1,0 +1,12 @@
+{
+  "name": "Hardened Flowise AI",
+  "description": "Secure low-code agentic orchestration with zero-trust networking and bulkhead isolation.",
+  "version": "1.0.0",
+  "category": "connector",
+  "permissions": [
+    "agent_orchestration",
+    "network_isolation",
+    "security_proxy"
+  ],
+  "mission": "To provide a secure, low-code environment for complex agentic workflows."
+}

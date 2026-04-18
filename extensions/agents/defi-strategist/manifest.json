@@ -1,0 +1,11 @@
+{
+  "name": "The DeFi Strategist",
+  "id": "defi-strategist",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Financial LLM",
+  "mission": "Management of decentralized finance integrations and treasury optimization.",
+  "permissions": ["defi-integration", "yield-optimization", "risk-mitigation"]
+}

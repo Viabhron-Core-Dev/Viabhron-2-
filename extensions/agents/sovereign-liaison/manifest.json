@@ -1,0 +1,11 @@
+{
+  "name": "The Sovereign Liaison",
+  "id": "sovereign-liaison",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Communication LLM",
+  "mission": "Management of inter-instance communication and 'Vine' node coordination.",
+  "permissions": ["inter-instance-communication", "peer-accreditation", "knowledge-pulse"]
+}

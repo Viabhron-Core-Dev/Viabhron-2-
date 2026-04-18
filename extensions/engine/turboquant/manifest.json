@@ -1,0 +1,8 @@
+{
+  "id": "turboquant",
+  "name": "TurboQuant Substrate Patch",
+  "version": "1.0.0",
+  "description": "Performance optimization for LLM inference and token throughput via dynamic quantization.",
+  "category": "engine",
+  "status": "active"
+}

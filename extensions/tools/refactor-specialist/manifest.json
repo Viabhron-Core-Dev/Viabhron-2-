@@ -1,0 +1,12 @@
+{
+  "name": "The Refactor Specialist",
+  "description": "Autonomous repository-scale code refactoring and technical debt reduction with automated testing.",
+  "version": "1.0.0",
+  "category": "tool",
+  "permissions": [
+    "code_refactoring",
+    "technical_debt_analysis",
+    "automated_testing"
+  ],
+  "mission": "To maintain the OS's code health and architectural integrity at scale."
+}

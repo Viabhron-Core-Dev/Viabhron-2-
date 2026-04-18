@@ -1,0 +1,11 @@
+{
+  "name": "The Creative Director",
+  "id": "creative-director",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "executive",
+  "level": 2,
+  "brain": "Creative LLM",
+  "mission": "Visual orchestration and multi-step creative workflows.",
+  "permissions": ["visual-orchestration", "creative-workflow"]
+}

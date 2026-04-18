@@ -1,0 +1,11 @@
+{
+  "name": "The Sentinel",
+  "id": "sentinel",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "executive",
+  "level": 2,
+  "brain": "Security LLM",
+  "mission": "Threat detection and system log auditing.",
+  "permissions": ["threat-detection", "log-auditing", "guardian-feed"]
+}

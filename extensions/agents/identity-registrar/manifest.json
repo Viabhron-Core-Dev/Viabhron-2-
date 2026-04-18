@@ -1,0 +1,11 @@
+{
+  "name": "The Sovereign Identity Registrar",
+  "id": "identity-registrar",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "executive",
+  "level": 2,
+  "brain": "Security-Hardened LLM",
+  "mission": "Management of the 8004 Identity Protocol and agent accreditation.",
+  "permissions": ["8004-management", "agent-accreditation", "passport-issuance"]
+}

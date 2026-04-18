@@ -1,0 +1,8 @@
+{
+  "id": "svl",
+  "name": "Sovereign Verification Loop (SVL)",
+  "version": "1.0.0",
+  "description": "Continuous, automated adversarial auditing and recursive security scans.",
+  "category": "module",
+  "status": "active"
+}

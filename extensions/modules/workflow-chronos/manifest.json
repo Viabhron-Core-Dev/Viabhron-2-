@@ -1,0 +1,12 @@
+{
+  "name": "Workflow Chronos (Time-Travel Debugging)",
+  "description": "Visual timeline and debugging for autonomous agent actions with Rewind/Replay logic.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "workflow_debugging",
+    "state_snapshotting",
+    "time_travel_logic"
+  ],
+  "mission": "To provide absolute observability and control over autonomous agent workflows."
+}

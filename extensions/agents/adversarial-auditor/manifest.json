@@ -1,0 +1,11 @@
+{
+  "name": "The Adversarial Auditor",
+  "id": "adversarial-auditor",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "specialized",
+  "level": 5,
+  "brain": "Security-Hardened LLM",
+  "mission": "Vulnerability detection and zero-trust security audits.",
+  "permissions": ["vulnerability-detection", "security-audit", "bulkhead-isolation"]
+}

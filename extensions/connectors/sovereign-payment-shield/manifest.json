@@ -1,0 +1,21 @@
+{
+  "id": "sovereign-payment-shield",
+  "name": "Sovereign Payment Shield",
+  "description": "Enforcement of BIS/RBI security standards for encrypted QR and biometric payments.",
+  "type": "connector",
+  "author": "Viabhron Core",
+  "version": "1.0.0",
+  "capabilities": [
+    "bis_qr_synthesis",
+    "biometric_2fa_handshake",
+    "fraud_sentinel_monitoring",
+    "compliance_fiscal_ledger"
+  ],
+  "config": {
+    "metabolicThreshold": {
+      "type": "number",
+      "default": 1000,
+      "description": "The amount (in INR/equivalent) above which a biometric handshake is required."
+    }
+  }
+}

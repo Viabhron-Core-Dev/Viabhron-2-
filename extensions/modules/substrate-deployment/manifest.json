@@ -1,0 +1,12 @@
+{
+  "name": "Substrate Deployment (Helm/Gradle)",
+  "description": "Standardized deployment manifests for diverse environments using infrastructure-as-code.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "deployment_orchestration",
+    "infrastructure_as_code",
+    "environment_configuration"
+  ],
+  "mission": "To provide standardized deployment paths for the OS and its extensions."
+}

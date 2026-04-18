@@ -1,0 +1,436 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    // 
+    // Collection: users
+    // Document ID: {userId}
+    // Fields:
+    //   - uid: string (required)
+    //   - activeTabId: string (required)
+    //   - createdAt: timestamp
+    //   - updatedAt: timestamp
+    //
+    // Collection: users/{userId}/tabs
+    // Document ID: {tabId}
+    // Fields:
+    //   - id: string (required)
+    //   - title: string (required)
+    //   - type: string (required)
+    //   - status: string (required, enum: active, shelved, archived)
+    //   - agentId: string (optional)
+    //   - createdAt: timestamp
+    //
+    // Collection: users/{userId}/vaa/chats
+    // Document ID: {chatId}
+    // Fields:
+    //   - id: string (required)
+    //   - name: string (optional)
+    //   - type: string (required, enum: direct, council, individual, workflow, debate, agent, gmail, sentinel)
+    //   - filterCategory: string (optional)
+    //   - lastMessage: string (optional)
+    //   - updatedAt: timestamp
+    //
+    // Collection: users/{userId}/vaa/filters
+    // Document ID: {filterId}
+    // Fields:
+    //   - id: string (required)
+    //   - label: string (required)
+    //   - active: bool (required)
+    //   - order: int (required)
+    //
+    // Collection: users/{userId}/agents
+    // Document ID: {agentId}
+    // Fields:
+    //   - id: string (required)
+    //   - name: string (required)
+    //   - role: string (required, enum: head, executive, contractor, consultant, specialized)
+    //   - provider: string (required)
+    //   - model: string (required)
+    //   - status: string (required, enum: active, inactive, error)
+    //   - color: string (required)
+    //   - lastActive: timestamp
+    //
+    // Collection: users/{userId}/notifications
+    // Document ID: {notificationId}
+    // Fields:
+    //   - id: string (required)
+    //   - title: string (required)
+    //   - message: string (required)
+    //   - type: string (required, enum: security, info, warning, error, system)
+    //   - read: bool (required)
+    //   - timestamp: timestamp
+    //
+    // Collection: users/{userId}/tabs/{tabId}/messages
+    // Document ID: {messageId}
+    // Fields:
+    //   - id: string (required)
+    //   - role: string (required, enum: user, assistant, system)
+    //   - content: string (required)
+    //   - timestamp: timestamp
+    //
+    // Collection: users/{userId}/memories
+    // Document ID: {memoryId}
+    // Fields:
+    //   - id: string (required)
+    //   - type: string (required, enum: preference, fact, style, goal, resonance)
+    //   - content: string (required)
+    //   - strength: int (required, 1-10)
+    //   - timestamp: timestamp
+    //
+    // Collection: users/{userId}/vault
+    // Document ID: {pointerId}
+    // Fields:
+    //   - id: string (required)
+    //   - path: string (required)
+    //   - gdriveId: string (required)
+    //   - encryptionHash: string (required)
+    //   - size: int (required)
+    //   - compressed: bool (required)
+    //   - timestamp: timestamp
+    //
+    // Collection: users/{userId}/logs
+    // Document ID: {logId}
+    // Fields:
+    //   - id: string (required)
+    //   - type: string (required, enum: command, output, error, system, thought)
+    //   - content: string (required)
+    //   - timestamp: timestamp
+    //   - agentId: string (optional)
+    //
+    // Collection: users/{userId}/sentinel/config
+    // Document ID: config
+    // Fields:
+    //   - scanInterval: int (required, 1-24)
+    //   - scanDepth: string (required, enum: quick, deep, paranoid)
+    //   - active: bool (required)
+    //
+    // Collection: users/{userId}/sentinel/results
+    // Document ID: {resultId}
+    // Fields:
+    //   - id: string (required)
+    //   - fileName: string (required)
+    //   - status: string (required, enum: clean, suspicious, malicious)
+    //   - threatLevel: int (required, 0-100)
+    //   - timestamp: timestamp
+    //   - engine: string (required)
+    //
+    // Collection: users/{userId}/security/rules
+    // Document ID: {ruleId}
+    // Fields:
+    //   - id: string (required)
+    //   - name: string (required)
+    //   - naturalLanguage: string (required)
+    //   - technicalBlock: string (required)
+    //   - type: string (required, enum: security, operational, fiscal)
+    //   - urgencyLevel: string (required, enum: standard, critical)
+    //   - active: bool (required)
+    //   - createdAt: timestamp
+    //
+    // Collection: users/{userId}/secrets
+    // Document ID: {secretId}
+    // Fields:
+    //   - id: string (required)
+    //   - label: string (required)
+    //   - value: string (required)
+    //   - type: string (required, enum: api_key, oauth_token, other)
+    //   - createdAt: timestamp
+    //
+    // Collection: users/{userId}/skills
+    // Document ID: {skillId}
+    // Fields:
+    //   - id: string (required)
+    //   - name: string (required)
+    //   - code: string (required)
+    //   - type: string (required, enum: script, tool, workflow)
+    //   - status: string (required, enum: draft, ratified, archived)
+    //   - createdAt: timestamp
+    //
+    // Collection: users/{userId}/hatchery/projects
+    // Document ID: {projectId}
+    // Fields:
+    //   - id: string (required)
+    //   - name: string (required)
+    //   - status: string (required, enum: ideation, development, auditing, staging, production)
+    //   - createdAt: timestamp
+    //
+    // Collection: users/{userId}/governance/proposals
+    // Document ID: {proposalId}
+    // Fields:
+    //   - id: string (required)
+    //   - title: string (required)
+    //   - type: string (required, enum: department, governance, infrastructure)
+    //   - status: string (required, enum: pending, ratified, shelved, vetoed)
+    //   - createdAt: timestamp
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidUser(data) {
+      return data.keys().hasAll(['uid', 'activeTabId']) &&
+             data.uid == request.auth.uid;
+    }
+
+    function isValidTab(data) {
+      return data.keys().hasAll(['id', 'title', 'type', 'status']) &&
+             data.id is string && data.id.size() < 128 &&
+             data.title is string && data.title.size() < 100 &&
+             data.type is string && data.type.size() < 50 &&
+             data.status in ['active', 'shelved', 'archived'];
+    }
+
+    function isValidChat(data) {
+      return data.keys().hasAll(['id', 'type', 'updatedAt']) &&
+             data.id is string && data.id.size() < 128 &&
+             data.type in ['direct', 'council', 'individual', 'workflow', 'debate', 'agent', 'gmail', 'sentinel'] &&
+             (!('name' in data) || (data.name is string && data.name.size() < 100)) &&
+             (!('filterCategory' in data) || (data.filterCategory is string && data.filterCategory.size() < 50));
+    }
+
+    function isValidFilter(data) {
+      return data.keys().hasAll(['id', 'label', 'active', 'order']) &&
+             data.id is string && data.id.size() < 128 &&
+             data.label is string && data.label.size() < 50 &&
+             data.active is bool &&
+             data.order is int;
+    }
+
+    function isValidAgent(data) {
+      return data.keys().hasAll(['id', 'name', 'role', 'provider', 'model', 'status']) &&
+             data.id is string && data.id.size() < 128 &&
+             data.name is string && data.name.size() < 100 &&
+             data.role in ['head', 'executive', 'contractor', 'consultant', 'specialized'] &&
+             data.provider is string && data.provider.size() < 50 &&
+             data.model is string && data.model.size() < 100 &&
+             data.status in ['active', 'inactive', 'error'];
+    }
+
+    function isValidNotification(data) {
+      return data.keys().hasAll(['id', 'title', 'message', 'type', 'read', 'timestamp']) &&
+             data.id is string && data.id.size() < 128 &&
+             data.title is string && data.title.size() < 100 &&
+             data.message is string && data.message.size() < 1000 &&
+             data.type in ['security', 'info', 'warning', 'error', 'system'] &&
+             data.read is bool;
+    }
+
+    function isValidMessage(data) {
+      return data.keys().hasAll(['id', 'role', 'content', 'timestamp']) &&
+             data.role in ['user', 'assistant', 'system'];
+    }
+
+    function isValidMemory(data) {
+      return data.keys().hasAll(['id', 'type', 'content', 'strength', 'timestamp']) &&
+             data.type in ['preference', 'fact', 'style', 'goal', 'resonance'] &&
+             data.strength >= 1 && data.strength <= 10;
+    }
+
+    function isValidVaultPointer(data) {
+      return data.keys().hasAll(['id', 'path', 'gdriveId', 'encryptionHash', 'size', 'compressed', 'timestamp']);
+    }
+
+    function isValidAgentLog(data) {
+      return data.keys().hasAll(['id', 'type', 'content', 'timestamp']) &&
+             data.type in ['command', 'output', 'error', 'system', 'thought'];
+    }
+
+    function isValidSentinelConfig(data) {
+      return data.keys().hasAll(['scanInterval', 'scanDepth', 'active']) &&
+             data.scanDepth in ['quick', 'deep', 'paranoid'];
+    }
+
+    function isValidScanResult(data) {
+      return data.keys().hasAll(['id', 'fileName', 'status', 'threatLevel', 'timestamp', 'engine']) &&
+             data.status in ['clean', 'suspicious', 'malicious'];
+    }
+
+    function isValidSecurityRule(data) {
+      return data.keys().hasAll(['id', 'name', 'naturalLanguage', 'type', 'urgencyLevel', 'active', 'createdAt']) &&
+             data.type in ['security', 'operational', 'fiscal'] &&
+             data.urgencyLevel in ['standard', 'critical'];
+    }
+
+    function isValidSecret(data) {
+      return data.keys().hasAll(['id', 'label', 'value', 'type', 'createdAt']) &&
+             data.type in ['api_key', 'oauth_token', 'other'];
+    }
+
+    function isValidSkill(data) {
+      return data.keys().hasAll(['id', 'name', 'code', 'type', 'status', 'createdAt']) &&
+             data.type in ['script', 'tool', 'workflow'] &&
+             data.status in ['draft', 'ratified', 'archived'];
+    }
+
+    function isValidHatcheryProject(data) {
+      return data.keys().hasAll(['id', 'name', 'status', 'createdAt']) &&
+             data.status in ['ideation', 'development', 'auditing', 'staging', 'production'];
+    }
+
+    function isValidProposal(data) {
+      return data.keys().hasAll(['id', 'title', 'type', 'status', 'createdAt']) &&
+             data.type in ['department', 'governance', 'infrastructure'] &&
+             data.status in ['pending', 'ratified', 'shelved', 'vetoed'];
+    }
+
+    function isValidSOP(data) {
+      return data.keys().hasAll(['id', 'title', 'leadAgentId', 'manifest', 'status']) &&
+             data.status in ['active', 'draft', 'archived'];
+    }
+
+    function isValidExtension(data) {
+      return data.keys().hasAll(['id', 'name', 'category', 'status', 'source']) &&
+             data.category in ['connector', 'skill', 'tool', 'mcp', 'module', 'gaming', 'testing'] &&
+             data.status in ['active', 'inactive', 'error'] &&
+             data.source in ['inbuilt', 'external'];
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId) && isValidUser(request.resource.data);
+      allow update: if isOwner(userId) && isValidUser(request.resource.data);
+
+      match /tabs/{tabId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidTab(request.resource.data);
+        allow update: if isOwner(userId) && isValidTab(request.resource.data);
+        allow delete: if isOwner(userId);
+
+        match /messages/{messageId} {
+          allow read: if isOwner(userId);
+          allow create: if isOwner(userId) && isValidMessage(request.resource.data);
+        }
+      }
+
+      match /memories/{memoryId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidMemory(request.resource.data);
+        allow update: if isOwner(userId) && isValidMemory(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /vault/{pointerId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidVaultPointer(request.resource.data);
+        allow update: if isOwner(userId) && isValidVaultPointer(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /logs/{logId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidAgentLog(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /sentinel/config {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidSentinelConfig(request.resource.data);
+      }
+
+      match /sentinel/results/{resultId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidScanResult(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /security/rules/{ruleId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidSecurityRule(request.resource.data);
+        allow update: if isOwner(userId) && isValidSecurityRule(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /vaa/chats/{chatId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidChat(request.resource.data);
+        allow delete: if isOwner(userId);
+
+        match /messages/{messageId} {
+          allow read: if isOwner(userId);
+          allow create: if isOwner(userId) && isValidMessage(request.resource.data);
+        }
+      }
+
+      match /vaa/filters/{filterId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidFilter(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /agents/{agentId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidAgent(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /notifications/{notificationId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidNotification(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /secrets/{secretId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidSecret(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /skills/{skillId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidSkill(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /hatchery/projects/{projectId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidHatcheryProject(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /governance/proposals/{proposalId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidProposal(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /governance/sops/{sopId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidSOP(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /system/extensions/{extensionId} {
+        allow read: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidExtension(request.resource.data);
+        allow delete: if isOwner(userId);
+      }
+
+      match /system/logs/{logId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId);
+        allow delete: if isOwner(userId);
+      }
+
+      match /heartbeat/{logId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId);
+        allow delete: if isOwner(userId);
+      }
+    }
+  }
+}

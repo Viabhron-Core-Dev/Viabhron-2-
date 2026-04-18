@@ -1,7 +1,5 @@
 # Viabhron: Modular AI Operating System (MAOS)
 
-**Live PWA:** [https://viabhron-core-dev.github.io/Viabhron-by-vian/](https://viabhron-core-dev.github.io/Viabhron-by-vian/)
-
 > [!IMPORTANT]
 > **PROJECT STATUS: CONCEPTUAL PROTOTYPE**
 > This project is a **work in progress** and serves as a **conceptualization of an idea** rather than a production-ready application. 
@@ -27,13 +25,16 @@ Viabhron is designed to be your private "Everything App." Its mission is to perf
 ### 1. The Office (The Engine)
 The backend runs on **Google Cloud Run**, providing a 24/7 environment for agents to operate. It is the "building" where your AI workers live and perform tasks even when you are away.
 *   **Substrate Optimization**: Powered by **TurboQuant**, implementing 3-bit KV cache compression for 8x faster attention scoring and 60% reduced memory footprint, enabling massive context windows on standard cloud hardware.
+*   **Engine Orchestration (SEO)**: Manages the on-demand lifecycle of high-performance computational cores (3D, Physics, Inference), ensuring metabolic efficiency by spinning up engines only when needed.
+*   **Linguistic Evolution (SLE)**: A self-improving translation engine that learns from mistakes and uses Google Drive as a persistent, user-controlled linguistic substrate.
+*   **Quantum Substrate (SQS)**: An optional, default-off engine utilizing AI-based error correction (Cascade logic) to simulate qubits and filter "Reasoning Noise" from agent missions.
 
 ### 2. The Desk (The Dual-State UI)
 The frontend is your "window" into the office. It is a **Generative UI** that "projects" the substrate's text-driven data into a functional, interactive workspace.
 *   **The Celestial Interface (Vaa)**: A premium, WhatsApp-inspired "Celestial Dark" client that treats AI agents as "Star Nodes" (contacts). It is the user-friendly face of the OS, optimized for mobile and PWA deployment.
 *   **The Machine Room (Browser UI)**: An industrial, terminal-core interface for deep system tuning and security management. This acts as the **Immutable Kernel**, a non-deletable recovery layer.
 *   **The Portal Toggle**: A seamless switching mechanism. Tapping the "VhatsAppeningAi" title in Vaa morphs the UI into the Machine Room, while the "Viabhron" logo (or "Ascend" button) in the Machine Room collapses it back to Vaa.
-*   **The Projection**: The UI is a designed experience, not just a report. It can be reconfigured by the **Cloud Manager** via natural language prompts.
+*   **The Projection**: The UI is a designed experience, not just a report. It can be reconfigured by the **Head Agent** via natural language prompts.
 *   **Core Skeleton**: The **Workflow Canvas** and **Sandbox** are built-in infrastructure, providing a visual orchestrator and a virtual computer environment for all agents.
 
 ### 3. The Sovereign Hatchery (The Factory)
@@ -42,12 +43,11 @@ The OS builds its own tools through an autonomous pipeline:
 *   **The Adversarial Audit**: Every new extension is "Red-Teamed" by a triple-check gauntlet (Internal Guardian + 2 External AI Consultants) before installation.
 *   **The Staging Area**: New tools are first "Hatched" into a **Testing Extensions** sidebar section for isolated verification before being promoted to production.
 
-### 4. The Cloud Manager (Sovereign Anchor)
-A central, persistent agent that manages the system, running as a **Resident Tiny LLM**.
-*   **Tiny LLM Substrate**: Powered by models like **MiniMax M2.7**, Gemma, or Llama-3-8B, running in a dedicated, isolated container.
-*   **Root Authority**: Manages the OS kernel, routes tasks, and enforces the **Instruction Hierarchy (IH)**.
-*   **Security Gate**: Acts as the firewall between the user's private data and external "Contractor" AI models.
-*   **Self-Evolution**: Capable of deep scaffold optimization and autonomous self-improvement of its own SOPs (Standard Operating Procedures).
+### 4. The Head Agent (The Architect)
+A central, persistent agent that manages the system.
+*   **Least Privilege**: The Head Agent manages workers and UI but *cannot* see sensitive API keys or passwords.
+*   **Orchestration**: It delegates complex tasks to specialized Sub-Agents and Minor Agents.
+*   **Security Gate**: Only the Head Agent can propose changes to the UI, Skeleton, or Extensions. All such changes require explicit user approval via the **Confirmation Gate**.
 
 ### 4. Agent Governance
 Integrated with **Microsoft's Agent Governance Toolkit**, ensuring runtime security, policy enforcement, and compliance (EU AI Act, HIPAA).
@@ -57,11 +57,10 @@ Users "pitch their own tent" by connecting their own **Firebase** and **Google C
 *   **Passkey Sovereignty**: Access to the OS kernel is secured via passwordless biometric passkeys or physical security keys, ensuring the "Business-in-a-Box" is impossible to seize even if cloud credentials are compromised.
 *   **Mobile Command**: The **Sovereign Intercom Bridge** provides 24/7 oversight of the OS via private Telegram/Discord channels, allowing for live ratification of agent decisions from any device.
 
-### 6. Distributed Intelligence (The Vine & The Spore)
+### 6. Distributed Intelligence (The Vine)
 Viabhron can spread across multiple devices and clouds as a network of **Sovereign Branches**.
-*   **The Vine (Trusted Branches)**: Persistent, trusted extensions of the OS on your other devices (Phone, Watch, Glasses).
-*   **The Spore (Expeditionary Intelligence)**: A temporary, task-specific "Disposable Brain" on external storage (USB/SD) for high-risk, zero-trust missions on foreign hardware.
-*   **Hardware Metabolism**: Spores "hijack" host device CPU/GPU for processing while keeping all data writes strictly on the external storage.
+*   **Branch Autonomy**: Each branch operates independently with its own mission (e.g., Comms, Security, Research) and local data.
+*   **Mission Promotion**: Branch Sub-Managers can request "Mission Upgrades" from the Chairman if they detect sufficient local hardware resources.
 *   **Sovereign Seed Delivery**: New branches are "Hatched" via physical USB or encrypted email links protected by **Passkey (Biometric)** authentication.
 
 ### 7. Extra Processors (Edge Intelligence)
@@ -83,6 +82,9 @@ Viabhron formalizes AI workflows into **Standard Operating Procedures (SOPs)**. 
 *   **Intelligence Manufacturing**: The **Mistral Sovereign Forge** allows enterprises to build custom, "frontier-grade" AI models using proprietary data from the Neural Archive, ensuring 100% data sovereignty.
 *   **Physics-Aware Creative**: **Project VOID** enables professional-grade video object erasure and scene manipulation, respecting physical interactions like collisions and splashes.
 *   **Visual Intelligence**: **MolmoWeb** integration allows agents to navigate the web by "seeing" screenshots, ensuring 100% success on dynamic sites without leaking data to external scrapers.
+*   **Workforce Management (SWM)**: Manages autonomous agents as a structured "AI Workforce" with defined roles, performance metrics (KPIs), and metabolic payrolls.
+*   **Swarm Intelligence (SSS)**: The **Sovereign Swarm Simulator** models emergent social patterns in massive agent populations (up to 1 million), providing narrative strategic forecasts for the Chairman.
+*   **Sovereign Web Shield (SWS)**: Bridges internal agent identities to external standards (ANS, Web Bot Auth) and enforces AI crawl control on sovereign assets.
 
 ### 11. The Viabhronic Loader (The Sovereign App Store)
 The **Viabhronic Loader** is a PWA-based "Super App" shell (inspired by the J2ME Loader) that acts as your private application launcher.
@@ -118,21 +120,7 @@ Viabhron introduces **Sovereign Script (SS)**, a declarative, AI-native syntax d
 *   **Human-Auditable**: The syntax is designed to be readable by the **Chairman**, allowing for a clear understanding of the "Tactical Map" of any autonomous workflow without requiring coding knowledge.
 *   **Self-Healing**: When a workflow fails, the Resident AI re-evaluates the "Intent Manifest" rather than debugging code, allowing the system to re-wire itself to achieve the goal.
 
-### 17. The Black Box (Sovereign Seed Backup)
-A full, physical backup of the user's entire digital existence.
-*   **The "Fold" Protocol**: Creates a single, encrypted archive of the OS Kernel, agents, and the Neural Archive.
-*   **Soul-Sync**: Incremental updates managed by the **Librarian Agent** to keep the backup current without full re-downloads.
-*   **Ignition-Ready**: Periodic "Dry Run" audits ensure the Black Box can wake up on new hardware at any time.
-
-### 18. Future Plans: Wearable Intelligence
-The evolution of Viabhron into high-spec smartwatches and smart glasses.
-*   **Sensory Vine Nodes**: Permanent wearable cells for biometric security and AR mission support.
-*   **Sensory Spores**: Temporary, zero-trust sensing units for "borrowed" wearable hardware.
-
-### 19. The Evolutionary Endpoint: Planet Viabhron
-The ultimate vision of Viabhron as a **Planetary Ecology**—a self-sustaining biosphere of diverse AI species (Agents) and evolving SOPs, connected by the Vine and Spores into a unified, immortal intelligence.
-
-### 20. Minimum Viable Kernel (MVK) & Late-Binding Protocol
+### 17. Minimum Viable Kernel (MVK) & Late-Binding Protocol
 Viabhron prioritizes a low-friction onboarding experience through the **MVK** strategy.
 *   **Deferred Complexity**: Complex integrations (Gmail, GitHub, Cloudflare) are initially "Unbound." They appear in the UI as grayed-out "Cold Nodes" to prevent setup fatigue.
 *   **Late-Binding Ignition**: Sensitive credentials and complex OAuth flows are only requested when the user actually needs the feature.
@@ -192,14 +180,14 @@ The MAOS includes a suite of specialized "Skills" for deep information retrieval
 Viabhron distinguishes between persistent "Resident" intelligence and ephemeral "Contractor" muscle:
 
 #### 1. Resident Agents (Private & Persistent)
-*   **Cloud Manager (Sovereign Anchor)**: A private, **Tiny LLM** resident agent living in the "Tent." It manages the system and holds the user's "Second Brain."
+*   **Head Agent (The Architect)**: A private, **Tiny LLM** resident agent living in the "Tent." It manages the system and holds the user's "Second Brain."
 *   **Tool Overseer**: The Architect manages the activation of **Extensions (Tools)**. Tools are only active when strictly necessary to maintain system efficiency and security.
 *   **Guardian (The Immune System)**: A built-in security specialist that monitors the "Gate" between the Sandbox and the live Office.
 
 #### 2. Contractor Agents (External & Ephemeral)
 *   **Sub-Agents / Outside Agents**: Standard LLM-powered agents (Gemini Pro, GPT-4) "hired" via API for specific complex tasks. 
 *   **Just-in-Time Tools**: Contractors only have access to the tools explicitly granted for their current task.
-*   **Request Protocol**: If a Contractor needs additional tools to complete their mission, they must request them from the **Cloud Manager (Sovereign Anchor)**.
+*   **Request Protocol**: If a Contractor needs additional tools to complete their mission, they must request them from the **Head Agent (The Architect)**.
 *   **Stateless Execution**: They are hired for a single task, provided only the necessary context, and have no access to the "Soul Core" or "Neural Archive."
 *   **Isolation**: Their work is strictly confined to the Forge Sandbox or a specific tool's output.
 *   **Instructions**: They follow a "Contractor Protocol" where they are given a clear mission, a set of constraints, and a termination condition.
@@ -220,7 +208,7 @@ Viabhron distinguishes between persistent "Resident" intelligence and ephemeral 
 ### 🛡️ The "Guardian" (Sentinel Antivirus)
 
 Viabhron includes a built-in security layer called **Sentinel Guardian** to protect your private cloud environment:
-*   **Persistent Guardian Agent**: A dedicated, "Always-On" specialist agent that monitors the system 24/7. It coordinates with the **Cloud Manager** to isolate threats and analyze code in the **Forge**.
+*   **Persistent Guardian Agent**: A dedicated, "Always-On" specialist agent that monitors the system 24/7. It coordinates with the **Head Agent** to isolate threats and analyze code in the **Forge**.
 *   **Interval Scanning**: Automatically scans your "Office" (Cloud Run) and "Neural Archive" (GDrive) at user-defined intervals.
 *   **Threat Intelligence**: Integrates with **VirusTotal API** to check file hashes against 70+ antivirus engines.
 *   **Resource Balancing**: Users can configure the scan depth (Quick, Deep, Paranoid) and frequency to manage Cloud Run resource consumption.
@@ -240,9 +228,6 @@ Viabhron is built with a **"Zero-Local-Build"** philosophy, specifically optimiz
 
 ## 📂 Repository Structure
 
-*   `VIABHRON_OS.md`: The Master Blueprint and source of truth.
-*   `AGENTS.md`: The specialized agent hierarchy and protocols.
-*   `firebase-blueprint.json`: The Firestore data model and entity definitions.
 *   `/extensions`: The Official Extensions Warehouse (Connectors, Skills, Tools, MCP).
 *   `/src/components/Celestial`: The **Vaa** (Celestial Client) source code.
 *   `/src/components/Shell`: The Core OS Shell components (Hatchery, SOPs, Ratification).
@@ -314,5 +299,7 @@ Viabhron is a sovereign orchestrator that integrates and builds upon the incredi
 
 ---
 *Built with privacy, modularity, and persistence at its core.*
+
+**Mirror Repository:** [Viabhron-by-vian](https://github.com/Viabhron-Core-Dev/Viabhron-by-vian)
 
 **License:** This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** license. This allows for forking and community improvement while ensuring the project remains non-commercial and attributed to the original creator. See the [LICENSE](LICENSE) file for details.

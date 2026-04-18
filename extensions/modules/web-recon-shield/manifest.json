@@ -1,0 +1,12 @@
+{
+  "name": "Web Reconnaissance Shield",
+  "description": "Protection against AI-targeted web attacks with Human-Agent Diff analysis and air-gapped scraping.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "web_reconnaissance",
+    "diff_analysis",
+    "zero_trust_scraping"
+  ],
+  "mission": "To provide a secure lens for agents to interact with the open web."
+}

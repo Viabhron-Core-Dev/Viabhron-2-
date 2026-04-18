@@ -1,0 +1,12 @@
+{
+  "name": "Trustpilot AI Visibility",
+  "description": "Passive brand monitoring in AI search results with sentiment thresholds and visibility pulses.",
+  "version": "1.0.0",
+  "category": "connector",
+  "permissions": [
+    "brand_monitoring",
+    "sentiment_analysis",
+    "web_reconnaissance"
+  ],
+  "mission": "To monitor and optimize the brand's visibility in the AI-driven search landscape."
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Token Governance Substrate (Dual-Slider System)",
+  "description": "Metabolic rate and budget management for the OS with global and module-specific sliders.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "budget_management",
+    "metabolic_rate_control",
+    "intelligence_degradation"
+  ],
+  "mission": "To provide granular control over the OS's fiscal and metabolic footprint."
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Collective Intelligence Protocol (cq)",
+  "description": "Knowledge-sharing system to prevent redundant AI processing with privacy-first anonymization.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "knowledge_sharing",
+    "data_anonymization",
+    "efficiency_optimization"
+  ],
+  "mission": "To leverage collective knowledge while maintaining absolute private sovereignty."
+}

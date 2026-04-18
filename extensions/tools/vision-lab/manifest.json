@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign Vision Lab",
+  "description": "Specialized substrate for visual reasoning and image analysis with high-clearance nodes.",
+  "version": "1.0.0",
+  "category": "tool",
+  "permissions": [
+    "visual_reasoning",
+    "image_analysis",
+    "high_clearance_processing"
+  ],
+  "mission": "To provide advanced visual intelligence capabilities to the OS."
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Device Intelligence (Fingerprint MCP)",
+  "id": "fingerprint",
+  "version": "1.0.0",
+  "description": "Hardware-level device verification and biometric passkeys.",
+  "type": "mcp",
+  "category": "Security",
+  "permissions": ["device:verify", "biometric:access"],
+  "entry": "index.ts"
+}

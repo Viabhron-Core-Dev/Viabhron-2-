@@ -1,0 +1,11 @@
+{
+  "name": "The Edge Architect",
+  "id": "edge-architect",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "IoT LLM",
+  "mission": "Hardware interfacing and IoT node management (Arduino).",
+  "permissions": ["hardware-interfacing", "iot-management", "mission-command"]
+}

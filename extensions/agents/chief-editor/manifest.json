@@ -1,0 +1,11 @@
+{
+  "name": "The Chief Editor",
+  "id": "chief-editor",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Editorial LLM",
+  "mission": "Content management and newsletter publishing (Substack).",
+  "permissions": ["content-management", "publishing", "ratified-publishing"]
+}

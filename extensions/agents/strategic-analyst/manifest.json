@@ -1,0 +1,11 @@
+{
+  "name": "The Strategic Analyst",
+  "id": "strategic-analyst",
+  "version": "1.0.0",
+  "category": "agent",
+  "role": "contractor",
+  "level": 3,
+  "brain": "Analytical LLM",
+  "mission": "High-level data synthesis, trend analysis, and strategic forecasting.",
+  "permissions": ["data-synthesis", "trend-analysis", "strategic-forecasting", "insight-extraction"]
+}

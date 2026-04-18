@@ -1,0 +1,12 @@
+{
+  "name": "Sovereign Workforce Manager (SWM)",
+  "description": "Fleet-scale agent orchestration with hierarchical command-and-control for massive deployments.",
+  "version": "1.0.0",
+  "category": "module",
+  "permissions": [
+    "workforce_orchestration",
+    "command_and_control",
+    "agent_deployment"
+  ],
+  "mission": "To manage the OS's agentic workforce at scale."
+}

@@ -1,0 +1,9 @@
+{
+  "name": "VhatsAppeningAi",
+  "description": "Sovereign Intelligence Client: A VAA-first hybrid intelligence operating system.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

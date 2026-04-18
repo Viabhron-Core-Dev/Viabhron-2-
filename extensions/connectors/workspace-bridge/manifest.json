@@ -1,0 +1,9 @@
+{
+  "name": "Workspace Bridge",
+  "id": "workspace-bridge",
+  "version": "1.0.0",
+  "description": "Deep integration with Google/Microsoft Workspace (Email & Calendar).",
+  "category": "connector",
+  "permissions": ["workspace-data-access"],
+  "entry": "index.ts"
+}
