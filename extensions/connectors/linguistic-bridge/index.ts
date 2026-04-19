@@ -91,3 +91,18 @@ export class LinguisticBridge {
     }
   }
 }
+
+import { MessageSquare } from 'lucide-react';
+import { Extension } from '../../../src/types';
+
+export const linguisticBridgeConnector: Extension = {
+  id: 'linguistic-bridge',
+  name: 'Linguistic Bridge',
+  description: 'Connects to local and OpenAI-compatible LLM engines.',
+  icon: MessageSquare,
+  category: 'connector',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export default LinguisticBridge;

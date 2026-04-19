@@ -16,6 +16,8 @@ import {
   Lock,
   Radar,
   List,
+  Cloud,
+  Book,
   Activity as Pulse,
   MessageSquare,
   Network,
@@ -521,6 +523,167 @@ export const sqsModule: Extension = {
   name: 'Sovereign Quantum Substrate (SQS)',
   description: 'High-performance compute layer for complex simulations.',
   icon: Zap,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+// Gamma Sovereign UI Modules
+export const metabolicSecretaryModule: Extension = {
+  id: 'metabolic-secretary',
+  name: 'Metabolic Secretary',
+  description: 'Proactive management of OS metabolic rate and budget.',
+  icon: Activity,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const workspaceBridgeModule: Extension = {
+  id: 'workspace-bridge',
+  name: 'Workspace Bridge',
+  description: 'Integration with Google Workspace for document management.',
+  icon: Globe,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const ambientSounderModule: Extension = {
+  id: 'ambient-sounder',
+  name: 'Ambient Sounder',
+  description: 'Mood-aware audio synthesis for focused work.',
+  icon: Music,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const cloudflareBridgeModule: Extension = {
+  id: 'cloudflare-cf-bridge',
+  name: 'Cloudflare Infra-as-Agent',
+  description: 'Infrastructure-as-Agent management via Cloudflare.',
+  icon: Cloud,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const socialSandboxModule: Extension = {
+  id: 'sovereign-social-sandbox',
+  name: 'Sovereign Social Sandbox',
+  description: 'Isolated environment for social automation and interaction.',
+  icon: MessageCircle,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const agentForgeModule: Extension = {
+  id: 'sovereign-agent-forge',
+  name: 'Sovereign Agent Forge',
+  description: 'Autonomous agent design and deployment substrate.',
+  icon: Cpu,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const frameworkAdapterModule: Extension = {
+  id: 'framework-adapter-bridge',
+  name: 'Framework Adapter',
+  description: 'Orchestration of LangChain, CrewAI, and external frameworks.',
+  icon: Layers,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const paymentShieldModule: Extension = {
+  id: 'sovereign-payment-shield',
+  name: 'Sovereign Payment Shield',
+  description: 'BIS-standard transaction security and biometric ratification.',
+  icon: Shield,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const threatIntelModule: Extension = {
+  id: 'sovereign-threat-intel',
+  name: 'Threat Intel Bridge',
+  description: 'In-depth analysis of MITRE ATT&CK and ATLAS advisories.',
+  icon: Radar,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const pulseFeedModule: Extension = {
+  id: 'sovereign-pulse-feed',
+  name: 'Sovereign Pulse Feed',
+  description: 'Aggregated intelligence stream from all OS divisions.',
+  icon: Zap,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const academyBridgeModule: Extension = {
+  id: 'sovereign-academy-bridge',
+  name: 'Sovereign Academy',
+  description: 'Educational substrate for training agents and users.',
+  icon: Book,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const interactionSubstrateModule: Extension = {
+  id: 'sovereign-interaction-substrate',
+  name: 'Interaction Substrate',
+  description: 'Zero-trust user interaction and notification layer.',
+  icon: Network,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const seedForgeModule: Extension = {
+  id: 'sovereign-seed-forge',
+  name: 'Sovereign Seed Forge',
+  description: 'One-click deployment of sovereign OS instances.',
+  icon: Send,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const newsBridgeModule: Extension = {
+  id: 'sovereign-news-bridge',
+  name: 'Sovereign News Bridge',
+  description: 'Resonance-filtered global and local news ingestion.',
+  icon: Globe,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const supplyChainShieldModule: Extension = {
+  id: 'sovereign-supply-chain-shield',
+  name: 'Supply Chain Shield',
+  description: 'Proactive malware detection in software dependencies.',
+  icon: ShieldAlert,
+  category: 'module',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const mcpShieldModule: Extension = {
+  id: 'sovereign-mcp-shield',
+  name: 'Sovereign MCP Shield',
+  description: 'Secure sandboxing for Model Context Protocol tools.',
+  icon: Lock,
   category: 'module',
   status: 'active',
   source: 'inbuilt'

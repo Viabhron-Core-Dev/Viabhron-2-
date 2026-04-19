@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#abb9d2",
+                        "tertiary-fixed": "#d0e8d7",
+                        "primary-container": "#4f46e5",
+                        "surface-container-highest": "#2e3447",
+                        "background": "#0c1324",
+                        "inverse-primary": "#4d44e3",
+                        "surface-container": "#191f31",
+                        "on-background": "#dce1fb",
+                        "secondary-fixed": "#d5e3fd",
+                        "secondary-fixed-dim": "#b9c7e0",
+                        "surface-container-low": "#151b2d",
+                        "error-container": "#93000a",
+                        "surface-variant": "#2e3447",
+                        "surface-bright": "#33394c",
+                        "inverse-surface": "#dce1fb",
+                        "on-surface": "#dce1fb",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#c7c4d8",
+                        "secondary": "#b9c7e0",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#0c1324",
+                        "outline": "#918fa1",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#3c4a5e",
+                        "on-tertiary": "#203529",
+                        "on-tertiary-fixed-variant": "#374b3f",
+                        "on-primary": "#1d00a5",
+                        "surface-tint": "#c3c0ff",
+                        "tertiary-container": "#506557",
+                        "outline-variant": "#464555",
+                        "on-primary-fixed": "#0f0069",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "inverse-on-surface": "#2a3043",
+                        "primary": "#c3c0ff",
+                        "on-tertiary-fixed": "#0b1f15",
+                        "on-secondary": "#233144",
+                        "surface-container-lowest": "#070d1f",
+                        "surface": "#0c1324",
+                        "tertiary-fixed-dim": "#b5ccbb",
+                        "on-primary-container": "#dad7ff",
+                        "tertiary": "#b5ccbb",
+                        "on-tertiary-container": "#c9e1d0",
+                        "on-secondary-fixed-variant": "#3a485c",
+                        "surface-container-high": "#23293c",
+                        "on-secondary-fixed": "#0d1c2f",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "primary-fixed": "#e2dfff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "mono": ["JetBrains Mono"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(7, 13, 31, 0.85);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ghost-border {
+            border: 1px solid rgba(70, 69, 85, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background min-h-screen overflow-hidden selection:bg-primary-container selection:text-on-primary">
+<!-- Desktop Background Layer -->
+<div class="fixed inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 grayscale-[0.5] contrast-125" data-alt="Cinematic low angle shot of a dense coniferous forest with morning mist and soft ethereal light rays filtering through the canopy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQxotp7Qg1I1hXv49r-K4oLaQnCPnVNadLZImsXkdCUBYjECzXBD5cg10jr1UH8SBPf1apqCLXGOQg8bluzkTi_dZ4bLqLJelDm3MVB1wU8gVAlhbR220QNrXjupsQhMEEHV4OT3nAQg4YPMDghjGC6DlwIPil86tIf8M-yiKUQaNJlMuU0tZ_t5HcttDpuiPw4wjWY2VylZJFB3-nG5S2ESyg34-4yslCdibfzQGBSoZHxF6F6icDQnJYaW_Tv0o69G6OVtN13Y0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<!-- Top Navigation Bar (Immutable JSON Source) -->
+<header class="fixed top-0 w-full z-50 h-12 flex justify-between items-center px-6 bg-slate-950/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(195,192,255,0.04)]">
+<div class="flex items-center gap-4">
+<span class="text-lg font-bold tracking-tighter text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer font-['Space_Grotesk']">VhatsAppeningAi</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 hover:bg-white/5 transition-all duration-300 cursor-pointer p-1 rounded">settings_input_component</span>
+<span class="material-symbols-outlined text-slate-400 hover:bg-white/5 transition-all duration-300 cursor-pointer p-1 rounded">account_tree</span>
+</div>
+</div>
+</header>
+<!-- Main 'Canopy' Glassmorphism Panel (Slide-up Overlay) -->
+<main class="fixed inset-x-4 bottom-20 top-16 z-40 flex flex-col items-center">
+<div class="w-full max-w-5xl h-full glass-panel rounded-t-[2.5rem] p-8 md:p-12 shadow-2xl flex flex-col gap-10 border-t border-white/10">
+<!-- Perplexity-style Omnibox -->
+<div class="w-full max-w-3xl mx-auto group">
+<div class="relative flex items-center bg-surface-container-lowest rounded-full p-2 ghost-border group-focus-within:shadow-[0_0_20px_rgba(79,70,229,0.2)] transition-all">
+<span class="material-symbols-outlined ml-4 text-primary">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-lg py-3 px-4 font-body placeholder:text-outline/50 text-on-surface" placeholder="Omnibox Search..." type="text"/>
+<div class="flex items-center gap-2 mr-2">
+<kbd class="hidden md:block px-2 py-1 bg-surface-container rounded text-[10px] font-mono text-outline">CTRL + K</kbd>
+<button class="bg-primary-container text-on-primary font-medium px-6 py-2 rounded-full hover:brightness-110 transition-all flex items-center gap-2">
+<span class="text-sm">Initiate</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Taxonomy Grid -->
+<div class="flex-1 overflow-y-auto">
+<div class="mb-6 flex items-baseline justify-between">
+<h2 class="font-headline text-xs font-black uppercase tracking-[0.3em] text-indigo-400">Forest Taxonomy</h2>
+<span class="font-mono text-[10px] text-tertiary-fixed-dim">SOVEREIGN MODE ACTIVE // NODE-04</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Birds: Governance -->
+<div class="group relative p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all cursor-pointer border-l-2 border-indigo-500/0 hover:border-indigo-500">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">flutter_dash</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold text-on-surface">Birds</h3>
+<p class="text-xs font-mono text-outline uppercase mt-1 tracking-wider">Governance</p>
+</div>
+<div class="pt-4 border-t border-white/5">
+<ul class="text-xs space-y-2 text-on-surface-variant font-body">
+<li class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity"><span class="w-1 h-1 bg-indigo-400 rounded-full"></span>Policy Engine</li>
+<li class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity"><span class="w-1 h-1 bg-indigo-400 rounded-full"></span>Neural Protocol</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Streams: Creative -->
+<div class="group relative p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all cursor-pointer border-l-2 border-indigo-500/0 hover:border-indigo-500">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">waves</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold text-on-surface">Streams</h3>
+<p class="text-xs font-mono text-outline uppercase mt-1 tracking-wider">Creative</p>
+</div>
+<div class="pt-4 border-t border-white/5">
+<ul class="text-xs space-y-2 text-on-surface-variant font-body">
+<li class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity"><span class="w-1 h-1 bg-indigo-400 rounded-full"></span>Flow Dynamics</li>
+<li class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity"><span class="w-1 h-1 bg-indigo-400 rounded-full"></span>Visual Pulse</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Insects: Dev/Hardware -->
+<div class="group relative p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all cursor-pointer border-l-2 border-indigo-500/0 hover:border-indigo-500">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">pest_control</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold text-on-surface">Insects</h3>
+<p class="text-xs font-mono text-outline uppercase mt-1 tracking-wider">Dev/Hardware</p>
+</div>
+<div class="pt-4 border-t border-white/5">
+<ul class="text-xs space-y-2 text-on-surface-variant font-body">
+<li class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity"><span class="w-1 h-1 bg-indigo-400 rounded-full"></span>Core Logic</li>
+<li class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity"><span class="w-1 h-1 bg-indigo-400 rounded-full"></span>Kernel Logs</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Deep Soil: Settings/Security -->
+<div class="group relative p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container-high transition-all cursor-pointer border-l-2 border-indigo-500/0 hover:border-indigo-500">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 flex items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">layers</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold text-on-surface">Deep Soil</h3>
+<p class="text-xs font-mono text-outline uppercase mt-1 tracking-wider">Settings/Security</p>
+</div>
+<div class="pt-4 border-t border-white/5">
+<ul class="text-xs space-y-2 text-on-surface-variant font-body">
+<li class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity"><span class="w-1 h-1 bg-indigo-400 rounded-full"></span>Encrypted Root</li>
+<li class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity"><span class="w-1 h-1 bg-indigo-400 rounded-full"></span>Privilege Escalation</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Status Log Section -->
+<div class="mt-10 p-6 rounded-xl bg-surface-container-lowest/50 border border-white/5">
+<div class="flex items-center justify-between mb-4">
+<span class="font-mono text-[10px] text-tertiary uppercase tracking-widest flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
+                            System Heartbeat
+                        </span>
+<span class="font-mono text-[10px] text-outline">UPTIME: 144:12:09</span>
+</div>
+<div class="font-mono text-xs text-on-surface-variant space-y-1">
+<p class="opacity-80"><span class="text-indigo-400">[08:42:01]</span> Authentication successful. User Bio-Metric confirmed.</p>
+<p class="opacity-80"><span class="text-indigo-400">[08:42:02]</span> Loading Forest Taxonomy modules...</p>
+<p class="opacity-80"><span class="text-indigo-400">[08:42:05]</span> Connecting to Canary Node-Sigma-09.</p>
+<p class="text-tertiary-fixed"><span class="text-indigo-400">[08:42:08]</span> Deep Soil integrity verified. System ready.</p>
+</div>
+</div>
+</div>
+<!-- Footer Quick Actions -->
+<div class="flex items-center justify-between pt-6 border-t border-white/10">
+<div class="flex gap-4">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-sm">shield</span>
+<span class="font-headline text-[10px] uppercase tracking-widest">Sentinel</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-sm">vital_signs</span>
+<span class="font-headline text-[10px] uppercase tracking-widest">Metabolism</span>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<img class="w-8 h-8 rounded-full border border-indigo-400/30 object-cover" data-alt="Modern high-contrast portrait of a tech professional in low key dramatic lighting with subtle blue highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrQVPp-x_7Y1Ta4V3z3LmowxGDOOwD3qjnpj9K1dWV7G-bSPIiN4dDf_Tyh5Gz9UEVpcl6M8z25WHc3qeGoGz95fB3GdnHiMtnFLmEsHX2bF3Trwjm7AEhbAO508xtR01oUaPnIFPd9HH7Q4tAxblFYDWNk2SMjeZ7iyOBi53J2XV2XFynHEbg-R8-GsCu66kzd-dcI7i3Ltc9ptuO5DRfjof_eFrx48tcqNsa_0dBkf4ZybZVSGeUh1JhNfrJzTh0CEJzkc15DJY"/>
+<div class="hidden sm:block">
+<p class="text-[10px] font-mono text-indigo-400 leading-none">ROOT_USER</p>
+<p class="text-[9px] font-mono text-outline leading-tight">Canopy V2.4.0</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Immutable JSON Source) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-between items-center px-4 bg-slate-950/90 backdrop-blur-md h-[60px] z-50 border-t border-white/5 shadow-[0_-10px_40px_rgba(79,70,229,0.1)]">
+<div class="flex-1 flex justify-center items-center gap-2 md:gap-8">
+<div class="flex flex-col items-center gap-1 p-2 bg-indigo-500/20 text-indigo-300 rounded-lg scale-110 cursor-pointer active:scale-90 duration-150">
+<span class="material-symbols-outlined text-xl">capture</span>
+<span class="font-['JetBrains_Mono'] text-[10px]">Start</span>
+</div>
+<div class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-indigo-400 transition-all cursor-pointer active:scale-90 duration-150">
+<span class="material-symbols-outlined text-xl">terminal</span>
+<span class="font-['JetBrains_Mono'] text-[10px]">Terminal</span>
+</div>
+<div class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-indigo-400 transition-all cursor-pointer active:scale-90 duration-150">
+<span class="material-symbols-outlined text-xl">dashboard_customize</span>
+<span class="font-['JetBrains_Mono'] text-[10px]">Canvas</span>
+</div>
+<div class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-indigo-400 transition-all cursor-pointer active:scale-90 duration-150">
+<span class="material-symbols-outlined text-xl">monitoring</span>
+<span class="font-['JetBrains_Mono'] text-[10px]">Sentinel</span>
+</div>
+<div class="flex flex-col items-center gap-1 p-2 text-slate-500 hover:text-indigo-400 transition-all cursor-pointer active:scale-90 duration-150">
+<span class="material-symbols-outlined text-xl">schedule</span>
+<span class="font-['JetBrains_Mono'] text-[10px]">12:00</span>
+</div>
+</div>
+</nav>
+</body></html>

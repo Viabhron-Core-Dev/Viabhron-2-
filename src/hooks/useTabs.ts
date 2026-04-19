@@ -27,7 +27,7 @@ export function useTabs(user: User | null, extensions: Extension[]) {
           if (prev.length > 0) return prev;
           const defaultExtensionIds = extensions.filter(e => e.status === 'active').map(e => e.id);
           const initialTab: Tab = { 
-            id: '1', 
+            id: 'default-vaa-tab', 
             title: 'VhatsAppeningAi', 
             type: 'vhatsappening', 
             active: true,
@@ -36,7 +36,7 @@ export function useTabs(user: User | null, extensions: Extension[]) {
             canvasData: { nodes: [], edges: [] },
             metadata: { lastAccessed: new Date() }
           };
-          setActiveTabId('1');
+          setActiveTabId('default-vaa-tab');
           return [initialTab];
         });
       }
@@ -53,7 +53,7 @@ export function useTabs(user: User | null, extensions: Extension[]) {
       } as Tab));
 
       if (fetchedTabs.length === 0) {
-        const newTabId = Date.now().toString();
+        const newTabId = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
         const defaultExtensionIds = extensions.filter(e => e.status === 'active').map(e => e.id);
         setDoc(doc(tabsRef, newTabId), {
           id: newTabId,
@@ -144,7 +144,7 @@ export function useTabs(user: User | null, extensions: Extension[]) {
     }
 
     if (!user) {
-      const newId = Date.now().toString();
+      const newId = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
       const newTab: Tab = { 
         id: newId, 
         title, 
@@ -161,7 +161,7 @@ export function useTabs(user: User | null, extensions: Extension[]) {
       return;
     }
 
-    const newTabId = Date.now().toString();
+    const newTabId = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     const tabsRef = collection(db, 'users', user.uid, 'tabs');
     await setDoc(doc(tabsRef, newTabId), {
       id: newTabId,
@@ -179,14 +179,17 @@ export function useTabs(user: User | null, extensions: Extension[]) {
   };
 
   const handleCloseTab = async (id: string) => {
-    if (tabs.length === 1) return;
     if (user) {
       await deleteDoc(doc(db, 'users', user.uid, 'tabs', id));
+      if (activeTabId === id) {
+        const remainingTabs = tabs.filter(t => t.id !== id);
+        setActiveTabId(remainingTabs.length > 0 ? remainingTabs[remainingTabs.length - 1].id : null);
+      }
     } else {
       const newTabs = tabs.filter(t => t.id !== id);
       if (activeTabId === id) {
-        const lastTab = newTabs[newTabs.length - 1];
-        setActiveTabId(lastTab.id);
+        const lastTabId = newTabs.length > 0 ? newTabs[newTabs.length - 1].id : null;
+        setActiveTabId(lastTabId);
       }
       setTabs(newTabs);
     }

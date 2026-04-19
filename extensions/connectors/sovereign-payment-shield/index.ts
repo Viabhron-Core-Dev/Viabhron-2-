@@ -100,4 +100,17 @@ export class SovereignPaymentShield {
   }
 }
 
+import { Shield } from 'lucide-react';
+import { Extension } from '../../../src/types';
+
+export const sovereignPaymentShieldConnector: Extension = {
+  id: 'sovereign-payment-shield',
+  name: 'Sovereign Payment Shield',
+  description: 'BIS-standard transaction security and biometric ratification.',
+  icon: Shield,
+  category: 'connector',
+  status: 'active',
+  source: 'inbuilt'
+};
+
 export default SovereignPaymentShield;

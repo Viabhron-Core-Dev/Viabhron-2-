@@ -20,7 +20,7 @@ import {
   Trash2,
   Filter
 } from 'lucide-react';
-import { Notification, BackgroundTask, LogEntry, UIMode } from '../../types';
+import { Notification, BackgroundTask, LogEntry, UIMode } from '../../src/types';
 
 interface SentinelProps {
   backgroundTasks?: BackgroundTask[];

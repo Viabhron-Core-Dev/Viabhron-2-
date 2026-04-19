@@ -5,6 +5,24 @@ export * from './flowise';
 export * from './substack';
 export * from './luma-uni-1';
 
+// Gamma Sovereign Extensions
+export * from './cloudflare-cf-bridge';
+export * from './framework-adapter-bridge';
+export * from './linguistic-bridge';
+export * from './quantum-ops-bridge';
+export * from './sovereign-academy-bridge';
+export * from './sovereign-agent-forge';
+export * from './sovereign-interaction-substrate';
+export * from './sovereign-payment-shield';
+export * from './sovereign-pulse-feed';
+export * from './sovereign-social-sandbox';
+export * from './sovereign-threat-intel';
+export * from './workspace-bridge';
+export * from './sovereign-news-bridge';
+export * from './sovereign-supply-chain-shield';
+export * from './sovereign-mcp-shield';
+export * from './sovereign-mesh-connector';
+
 // Placeholders for missing connectors to fix build errors
 import { Github, Link, Zap, Cloud, Mail, MessageSquare } from 'lucide-react';
 import { Extension } from '../../src/types';

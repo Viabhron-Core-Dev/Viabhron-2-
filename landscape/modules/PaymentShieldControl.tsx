@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   Shield, 
   Fingerprint, 
   QrCode, 
   Lock, 
   Activity, 
-  AlertTriangle, 
   CheckCircle2, 
   RefreshCw, 
-  ShieldCheck,
-  CreditCard,
+  ShieldCheck, 
   Zap,
-  Info,
   ChevronRight,
   Terminal,
   Cpu,
@@ -29,7 +26,7 @@ interface Transaction {
 }
 
 export const PaymentShieldControl: React.FC = () => {
-  const [transactions, setTransactions] = useState<Transaction[]>([
+  const [transactions] = useState<Transaction[]>([
     { id: 'tx-882', amount: 1250.00, currency: 'INR', status: 'secure', type: 'Hybrid', timestamp: '2m ago' },
     { id: 'tx-881', amount: 45.00, currency: 'USD', status: 'secure', type: 'QR', timestamp: '15m ago' }
   ]);
@@ -205,7 +202,6 @@ export const PaymentShieldControl: React.FC = () => {
             className="absolute inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-6"
           >
             <div className="w-full max-w-sm p-8 rounded-[2.5rem] bg-[#151619] border border-white/10 text-center relative overflow-hidden">
-              {/* Hardware Scan Effect */}
               <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <motion.div 
                   animate={{ y: [0, 300, 0] }}

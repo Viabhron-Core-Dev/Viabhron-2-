@@ -1,22 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   ShieldAlert, 
-  ShieldCheck, 
   Radar, 
-  AlertTriangle, 
-  Info, 
-  ChevronRight, 
   RefreshCw, 
-  Terminal, 
   Activity, 
-  Lock, 
-  Eye, 
   Globe,
   Database,
-  Cpu,
+  Lock,
   Zap,
   Shield,
-  Search,
+  Info,
   ExternalLink
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -34,7 +27,7 @@ interface Advisory {
 }
 
 export const ThreatIntelControl: React.FC = () => {
-  const [advisories, setAdvisories] = useState<Advisory[]>([
+  const [advisories] = useState<Advisory[]>([
     { 
       id: 'adv-01', 
       title: 'ATLAS-T1566: Prompt Injection', 
@@ -59,7 +52,7 @@ export const ThreatIntelControl: React.FC = () => {
     }
   ]);
 
-  const [isScanning, setIsScanning] = useState(false);
+  const [isScanning] = useState(false);
 
   return (
     <div className="flex flex-col h-full bg-[#08080a] text-slate-300 font-sans selection:bg-red-500/30">
@@ -78,7 +71,6 @@ export const ThreatIntelControl: React.FC = () => {
           </div>
         </div>
         <button 
-          onClick={() => setIsScanning(true)}
           className="flex items-center gap-2 px-4 py-2 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-[10px] font-bold uppercase tracking-widest hover:bg-red-500/20 transition-all"
         >
           <RefreshCw className={`w-3.5 h-3.5 ${isScanning ? 'animate-spin' : ''}`} />

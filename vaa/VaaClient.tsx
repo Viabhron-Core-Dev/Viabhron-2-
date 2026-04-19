@@ -202,7 +202,7 @@ export const VaaClient: React.FC<VaaClientProps> = ({
     // Initialize chats
     const residentAgent = agents.find(a => a.isResident && a.role === 'head');
     
-    const agentNodes: CelestialChat[] = agents
+    const dynamicAgentChats: CelestialChat[] = agents
       .filter(agent => (!agent.isStaff || agent.isResident) && agent.id !== residentAgent?.id)
       .map(agent => ({
         id: `agent-${agent.id}`,
@@ -235,7 +235,7 @@ export const VaaClient: React.FC<VaaClientProps> = ({
         lastMessage: residentAgent?.description || "Sovereign Brain Initialized. Awaiting Chairman's command.",
         messages: [
           {
-            id: "cm1",
+            id: `cm-${Date.now()}-1`,
             role: "assistant",
             content: "Welcome back, Chairman. The Sovereign Kernel is stable. I am your Resident Agent, managing the private cloud substrate. How shall we proceed?",
             timestamp: new Date().toISOString()
@@ -252,19 +252,19 @@ export const VaaClient: React.FC<VaaClientProps> = ({
         lastMessage: "System Monitoring Active: All bulkheads secure.",
         messages: [
           {
-            id: "s1",
+            id: `s-${Date.now()}-1`,
             role: "assistant",
             content: "[INFO] Viabhron Kernel initialized successfully.",
             timestamp: new Date().toISOString()
           },
           {
-            id: "s2",
+            id: `s-${Date.now()}-2`,
             role: "assistant",
             content: "[SUCCESS] Sovereign Listener Bridge connected.",
             timestamp: new Date().toISOString()
           },
           {
-            id: "s3",
+            id: `s-${Date.now()}-3`,
             role: "assistant",
             content: "[WARN] High memory usage detected in Node-7.",
             timestamp: new Date().toISOString()
@@ -281,7 +281,7 @@ export const VaaClient: React.FC<VaaClientProps> = ({
         lastMessage: "Chairman, I have synthesized a new vulnerability in Node-7.",
         messages: [
           { 
-            id: "gw1", 
+            id: `gw-${Date.now()}-1`, 
             role: "assistant", 
             content: "[GLASSWING BRIEFING] I have identified a potential privilege escalation flaw in the 'Extra Processor' node manifest. This flaw is similar to the 27-year-old OpenBSD bug recently disclosed. I have a Sovereign Patch ready for ratification.", 
             timestamp: new Date().toISOString(),
@@ -298,13 +298,13 @@ export const VaaClient: React.FC<VaaClientProps> = ({
         lastMessage: "Finance Auditor Agent: 1,240 claims processed.",
         messages: [
           { 
-            id: "mc1", 
+            id: `mc-${Date.now()}-1`, 
             role: "assistant", 
             content: "[MISSION LOG] Finance Auditor Agent has successfully connected to the UiPath Orchestrator substrate. Primary User status confirmed.", 
             timestamp: new Date().toISOString()
           },
           { 
-            id: "mc2", 
+            id: `mc-${Date.now()}-2`, 
             role: "assistant", 
             content: "[STATUS] Healthcare Claims Worker synthesis at 45%. Adversarial Auditor is currently vetting the automation manifest.", 
             timestamp: new Date().toISOString()
@@ -314,7 +314,7 @@ export const VaaClient: React.FC<VaaClientProps> = ({
         updatedAt: Date.now(),
         filterCategory: "Corporate"
       },
-      ...agentNodes
+      ...dynamicAgentChats
     ];
 
     setChats(initialChats);
@@ -449,141 +449,6 @@ export const VaaClient: React.FC<VaaClientProps> = ({
     }
   };
 
-  // Map system agents to Celestial nodes (only if they have messages or are not staff)
-  const agentNodes: CelestialChat[] = agents
-    .filter(agent => !agent.isStaff) // Staff only in contact list
-    .map(agent => ({
-      id: `agent-${agent.id}`,
-      nodeId: agent.id,
-      name: agent.name,
-      lastMessage: agent.description || "System Agent ready for deployment.",
-      messages: [],
-      type: "agent",
-      updatedAt: Date.now(),
-      isHeadAgent: agent.name.toLowerCase().includes("architect") || 
-                   agent.name.toLowerCase().includes("omega") || 
-                   agent.name.toLowerCase().includes("cloud manager")
-    }));
-
-  const allChats: CelestialChat[] = [
-    {
-      id: "sentinel-feed",
-      name: "Sentinel Feed",
-      lastMessage: "System monitoring active...",
-      messages: [
-        { id: "s1", role: "assistant", content: "[INFO] Viabhron Kernel initialized successfully.", timestamp: new Date().toISOString() },
-        { id: "s2", role: "assistant", content: "[SUCCESS] Sovereign Listener Bridge connected.", timestamp: new Date().toISOString() },
-        { id: "s3", role: "assistant", content: "[WARN] High memory usage detected in Node-7.", timestamp: new Date().toISOString() }
-      ],
-      type: "sentinel",
-      updatedAt: Date.now(),
-      isSentinel: true,
-      filterCategory: "Semi Local"
-    },
-    {
-      id: "gmail-relay",
-      name: "Gmail Relay",
-      lastMessage: "Chairman, I have sanitized 3 new emails for you.",
-      messages: [
-        { 
-          id: "g1", 
-          role: "assistant", 
-          content: "I have processed your incoming streams. I removed 2 tracking pixels and 1 suspicious redirect from the elvilewis40@gmail.com thread.", 
-          timestamp: new Date().toISOString(),
-          sanitizationReport: { pixels: 2, links: 1 }
-        }
-      ],
-      type: "gmail",
-      updatedAt: Date.now(),
-      filterCategory: "Gmail"
-    },
-    {
-      id: "gmail-personal",
-      name: "[PERSONAL] vianney.l",
-      lastMessage: "No new sanitized messages.",
-      messages: [],
-      type: "gmail",
-      updatedAt: Date.now(),
-      filterCategory: "Gmail"
-    },
-    {
-      id: "gmail-work",
-      name: "[WORK] elvilewis40",
-      lastMessage: "Draft: Re: Q2 Planning Docs",
-      messages: [],
-      type: "gmail",
-      updatedAt: Date.now(),
-      filterCategory: "Gmail"
-    },
-    {
-      id: "sentinel-logs",
-      name: "Sentinel Logs",
-      lastMessage: "Sentinel: No new activity.",
-      messages: [],
-      type: "sentinel",
-      updatedAt: Date.now(),
-      filterCategory: "Semi Local"
-    },
-    {
-      id: "glasswing-auditor",
-      name: "Glasswing Auditor",
-      lastMessage: "Chairman, I have synthesized a new vulnerability in Node-7.",
-      messages: [
-        { 
-          id: "gw1", 
-          role: "assistant", 
-          content: "[GLASSWING BRIEFING] I have identified a potential privilege escalation flaw in the 'Extra Processor' node manifest. This flaw is similar to the 27-year-old OpenBSD bug recently disclosed. I have a Sovereign Patch ready for ratification.", 
-          timestamp: new Date().toISOString(),
-          metadata: { type: "security-alert", severity: "high" }
-        }
-      ],
-      type: "agent",
-      updatedAt: Date.now(),
-      filterCategory: "Cloudflare"
-    },
-    {
-      id: "mission-control",
-      name: "Mission Control",
-      lastMessage: "Finance Auditor Agent: 1,240 claims processed.",
-      messages: [
-        { 
-          id: "mc1", 
-          role: "assistant", 
-          content: "[MISSION LOG] Finance Auditor Agent has successfully connected to the UiPath Orchestrator substrate. Primary User status confirmed.", 
-          timestamp: new Date().toISOString()
-        },
-        { 
-          id: "mc2", 
-          role: "assistant", 
-          content: "[STATUS] Healthcare Claims Worker synthesis at 45%. Adversarial Auditor is currently vetting the automation manifest.", 
-          timestamp: new Date().toISOString()
-        }
-      ],
-      type: "agent",
-      updatedAt: Date.now(),
-      filterCategory: "Corporate"
-    },
-    {
-      id: "github-manifest",
-      name: "GitHub Manifest",
-      lastMessage: "New PR in Viabhron-OS: 'Sovereign Kernel Refactor'",
-      messages: [],
-      type: "agent",
-      updatedAt: Date.now(),
-      filterCategory: "GitHub"
-    },
-    {
-      id: "hatchery-lab",
-      name: "Hatchery Lab",
-      lastMessage: "Synthesis of 'Legal Research Agent' complete.",
-      messages: [],
-      type: "agent",
-      updatedAt: Date.now(),
-      filterCategory: "Hatchery"
-    },
-    ...agentNodes
-  ];
-
   const filteredChats = chats.filter(chat => {
     const matchesFilter = activeChatFilter === "All" || chat.filterCategory === activeChatFilter;
     const matchesSearch = chat.name.toLowerCase().includes(chatSearchQuery.toLowerCase()) || 
@@ -603,7 +468,7 @@ export const VaaClient: React.FC<VaaClientProps> = ({
     } else {
       // Create a new chat thread
       const newChat: CelestialChat = {
-        id: `chat-${Date.now()}`,
+        id: `chat-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`,
         nodeId: agent.id,
         name: agent.name,
         type: "agent",
@@ -622,7 +487,7 @@ export const VaaClient: React.FC<VaaClientProps> = ({
     if (!selectedChat || !content.trim()) return;
 
     const newMessage: Message = {
-      id: `msg-${Date.now()}`,
+      id: `msg-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`,
       role: "user",
       content: content.trim(),
       timestamp: new Date().toISOString()
@@ -644,7 +509,7 @@ export const VaaClient: React.FC<VaaClientProps> = ({
     // Simulate agent response
     setTimeout(() => {
       const response: Message = {
-        id: `resp-${Date.now()}`,
+        id: `resp-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`,
         role: "assistant",
         content: `I have received your command: "${content.trim()}". Processing via Sovereign Kernel...`,
         timestamp: new Date().toISOString()

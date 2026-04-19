@@ -21,7 +21,7 @@ import {
   RefreshCw
 } from 'lucide-react';
 import { motion } from 'motion/react';
-import { Extension, ExtensionCategory, UIMode } from '../../types';
+import { Extension, ExtensionCategory, UIMode } from '../../src/types';
 
 interface ExtensionStoreProps {
   onInstall: (extension: Extension) => void;

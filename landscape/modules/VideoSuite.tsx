@@ -14,7 +14,7 @@ import {
   Scissors,
   Share2
 } from 'lucide-react';
-import { UIMode } from '../../types';
+import { UIMode } from '../../src/types';
 
 export function VideoSuite({ uiMode }: { uiMode?: UIMode }) {
   const [isGenerating, setIsGenerating] = useState(false);

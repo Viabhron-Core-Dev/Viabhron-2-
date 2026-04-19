@@ -11,7 +11,7 @@ import {
   Component
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { UIMode } from '../../types';
+import { UIMode } from '../../src/types';
 
 interface Artifact {
   id: string;

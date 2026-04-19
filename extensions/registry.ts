@@ -11,7 +11,23 @@ import {
   arduinoConnector,
   flowiseConnector,
   substackConnector,
-  lumaUni1Connector
+  lumaUni1Connector,
+  cloudflareCfBridgeConnector,
+  frameworkAdapterBridgeConnector,
+  linguisticBridgeConnector,
+  quantumOpsBridgeConnector,
+  sovereignAcademyBridgeConnector,
+  sovereignAgentForgeConnector,
+  sovereignInteractionSubstrateConnector,
+  sovereignPaymentShieldConnector,
+  sovereignPulseFeedConnector,
+  sovereignSocialSandboxConnector,
+  sovereignThreatIntelConnector,
+  workspaceBridgeConnector,
+  sovereignNewsBridgeConnector,
+  sovereignSupplyChainShieldConnector,
+  sovereignMcpShieldConnector,
+  sovereignMeshConnector
 } from './connectors';
 import { globalPulseSkill, docForgeSkill, artifactSandboxSkill, codeHunterSkill, socialSentinelSkill, githubSecurityAuditorSkill, creativeDirectorSkill } from './skills';
 import { headlessBrowserTool, pdfExtractorTool, codeParserTool } from './tools';
@@ -44,6 +60,22 @@ import {
   ethicalSentinelModule,
   webReconShieldModule,
   vibeAssemblyModule,
+  metabolicSecretaryModule,
+  workspaceBridgeModule,
+  ambientSounderModule,
+  cloudflareBridgeModule,
+  socialSandboxModule,
+  agentForgeModule,
+  frameworkAdapterModule,
+  paymentShieldModule,
+  threatIntelModule,
+  pulseFeedModule,
+  academyBridgeModule,
+  interactionSubstrateModule,
+  seedForgeModule,
+  newsBridgeModule,
+  supplyChainShieldModule,
+  mcpShieldModule
 } from './modules';
 import {
   cloudManagerAgent,
@@ -55,7 +87,10 @@ import {
   linguisticEngineerAgent,
   chiefEditorAgent,
   soundEngineerAgent,
-  visualSynthesizerAgent
+  visualSynthesizerAgent,
+  nexusLibrarianAgent,
+  diplomatAgent,
+  metabolicSecretaryAgent
 } from './agents';
 
 export const INITIAL_EXTENSIONS: Extension[] = [
@@ -72,6 +107,22 @@ export const INITIAL_EXTENSIONS: Extension[] = [
   flowiseConnector,
   substackConnector,
   lumaUni1Connector,
+  cloudflareCfBridgeConnector,
+  frameworkAdapterBridgeConnector,
+  linguisticBridgeConnector,
+  quantumOpsBridgeConnector,
+  sovereignAcademyBridgeConnector,
+  sovereignAgentForgeConnector,
+  sovereignInteractionSubstrateConnector,
+  sovereignPaymentShieldConnector,
+  sovereignPulseFeedConnector,
+  sovereignSocialSandboxConnector,
+  sovereignThreatIntelConnector,
+  workspaceBridgeConnector,
+  sovereignNewsBridgeConnector,
+  sovereignSupplyChainShieldConnector,
+  sovereignMcpShieldConnector,
+  sovereignMeshConnector,
   
   // Skills
   globalPulseSkill,
@@ -122,6 +173,22 @@ export const INITIAL_EXTENSIONS: Extension[] = [
   ethicalSentinelModule,
   webReconShieldModule,
   vibeAssemblyModule,
+  metabolicSecretaryModule,
+  workspaceBridgeModule,
+  ambientSounderModule,
+  cloudflareBridgeModule,
+  socialSandboxModule,
+  agentForgeModule,
+  frameworkAdapterModule,
+  paymentShieldModule,
+  threatIntelModule,
+  pulseFeedModule,
+  academyBridgeModule,
+  interactionSubstrateModule,
+  seedForgeModule,
+  newsBridgeModule,
+  supplyChainShieldModule,
+  mcpShieldModule,
 
   // Agents
   cloudManagerAgent,
@@ -134,4 +201,7 @@ export const INITIAL_EXTENSIONS: Extension[] = [
   chiefEditorAgent,
   soundEngineerAgent,
   visualSynthesizerAgent,
+  nexusLibrarianAgent,
+  diplomatAgent,
+  metabolicSecretaryAgent,
 ];

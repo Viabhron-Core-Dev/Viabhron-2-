@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OBSIDIAN_CORE_v1.0 - Sovereign OS</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#c3c0ff",
+                        "secondary-container": "#3c4a5e",
+                        "primary-fixed": "#e2dfff",
+                        "on-tertiary": "#203529",
+                        "tertiary": "#b5ccbb",
+                        "surface-dim": "#0c1324",
+                        "inverse-primary": "#4d44e3",
+                        "tertiary-container": "#506557",
+                        "secondary-fixed": "#d5e3fd",
+                        "outline-variant": "#464555",
+                        "outline": "#918fa1",
+                        "surface": "#0c1324",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#3a485c",
+                        "on-primary-container": "#dad7ff",
+                        "inverse-surface": "#dce1fb",
+                        "on-secondary-container": "#abb9d2",
+                        "on-primary-fixed": "#0f0069",
+                        "surface-container": "#191f31",
+                        "primary-container": "#4f46e5",
+                        "primary": "#c3c0ff",
+                        "secondary": "#b9c7e0",
+                        "on-surface-variant": "#c7c4d8",
+                        "on-tertiary-fixed-variant": "#374b3f",
+                        "surface-container-lowest": "#070d1f",
+                        "on-secondary": "#233144",
+                        "on-secondary-fixed": "#0d1c2f",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "error": "#ffb4ab",
+                        "on-primary": "#1d00a5",
+                        "tertiary-fixed-dim": "#b5ccbb",
+                        "secondary-fixed-dim": "#b9c7e0",
+                        "on-tertiary-container": "#c9e1d0",
+                        "surface-variant": "#2e3447",
+                        "tertiary-fixed": "#d0e8d7",
+                        "inverse-on-surface": "#2a3043",
+                        "surface-bright": "#33394c",
+                        "on-background": "#dce1fb",
+                        "surface-container-highest": "#2e3447",
+                        "on-surface": "#dce1fb",
+                        "background": "#0c1324",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "surface-container-low": "#151b2d",
+                        "on-tertiary-fixed": "#0b1f15",
+                        "on-error": "#690005",
+                        "surface-container-high": "#23293c",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "mono": ["JetBrains Mono"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24
+    }
+.glass-panel {
+    background: rgba(12, 19, 36, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px)
+    }
+.bg-forest-blur {
+    background-image: linear-gradient(to bottom, rgba(7, 13, 31, 0.6), rgba(7, 13, 31, 0.9)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuCnwLw-cf9000eo55bsQuOXR5pBJkS4wRKn6CFKe0hKEwn38mwy6BJN1cJlWUcNzbaWl8wbQGhN3NACby9uGZtB9vjFkeen4E9n5yCc_osoU7rV5T4XMXwFOL7kUs9Ivcbwywb9M0PghNpEnTKbWniRL31pHB0DSjEw7wOowNv_cXuQz3YVXLJ6bzENztzeo3Hx6RmU2Dq2RXq5JzkoB8pJ0RrO9q8NIRsF-7bLVIA18I6F7YqG1ry0K2E0WdprC4_ljwlUNi1NQzg);
+    background-size: cover;
+    background-position: center
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen overflow-hidden select-none">
+<!-- Desktop Environment with Deep Forest Backdrop -->
+<div class="fixed inset-0 bg-forest-blur z-0" data-alt="deep out-of-focus forest canopy at dawn with soft morning light filtering through dense dark green foliage and misty atmosphere"></div>
+<!-- Top Status Bar (TopAppBar Proxy) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 max-w-full bg-transparent">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-indigo-400 text-sm">sensors</span>
+<h1 class="font-headline uppercase tracking-[0.2em] text-xs text-indigo-500 font-black tracking-widest">OBSIDIAN_CORE_v1.0</h1>
+</div>
+<div class="flex items-center space-x-6">
+<div class="font-mono text-[10px] text-slate-500 tracking-tighter flex space-x-4">
+<span>CPU: 12%</span>
+<span>MEM: 4.2GB</span>
+</div>
+<span class="material-symbols-outlined text-indigo-400 text-sm">battery_very_low</span>
+</div>
+</header>
+<!-- Main Workspace (Desktop Icons) -->
+<main class="relative z-10 w-full h-screen flex items-center justify-center px-8">
+<div class="grid grid-cols-2 gap-8 w-full max-w-4xl">
+<!-- Workflow Lab -->
+<div class="group relative bg-surface-container-low/30 glass-panel p-8 rounded-[2rem] flex flex-col items-center justify-center space-y-4 hover:bg-surface-container-high/40 transition-all duration-500 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-fixed shadow-[0_0_30px_rgba(79,70,229,0.2)]">
+<span class="material-symbols-outlined text-4xl">science</span>
+</div>
+<div class="text-center">
+<h2 class="font-headline text-lg font-bold text-on-surface tracking-wide">Workflow Lab</h2>
+<p class="font-mono text-[10px] text-slate-500 uppercase mt-1 tracking-widest">System_Automation.v2</p>
+</div>
+</div>
+<!-- Agent Forge -->
+<div class="group relative bg-surface-container-low/30 glass-panel p-8 rounded-[2rem] flex flex-col items-center justify-center space-y-4 hover:bg-surface-container-high/40 transition-all duration-500 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-fixed shadow-[0_0_30px_rgba(79,70,229,0.2)]">
+<span class="material-symbols-outlined text-4xl">psychology</span>
+</div>
+<div class="text-center">
+<h2 class="font-headline text-lg font-bold text-on-surface tracking-wide">Agent Forge</h2>
+<p class="font-mono text-[10px] text-slate-500 uppercase mt-1 tracking-widest">Neural_Architecture</p>
+</div>
+</div>
+<!-- SOP Registry -->
+<div class="group relative bg-surface-container-low/30 glass-panel p-8 rounded-[2rem] flex flex-col items-center justify-center space-y-4 hover:bg-surface-container-high/40 transition-all duration-500 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-fixed shadow-[0_0_30px_rgba(79,70,229,0.2)]">
+<span class="material-symbols-outlined text-4xl">inventory_2</span>
+</div>
+<div class="text-center">
+<h2 class="font-headline text-lg font-bold text-on-surface tracking-wide">SOP Registry</h2>
+<p class="font-mono text-[10px] text-slate-500 uppercase mt-1 tracking-widest">Protocol_Ledger</p>
+</div>
+</div>
+<!-- Nexus -->
+<div class="group relative bg-surface-container-low/30 glass-panel p-8 rounded-[2rem] flex flex-col items-center justify-center space-y-4 hover:bg-surface-container-high/40 transition-all duration-500 cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-fixed shadow-[0_0_30px_rgba(79,70,229,0.2)]">
+<span class="material-symbols-outlined text-4xl">hub</span>
+</div>
+<div class="text-center">
+<h2 class="font-headline text-lg font-bold text-on-surface tracking-wide">Nexus</h2>
+<p class="font-mono text-[10px] text-slate-500 uppercase mt-1 tracking-widest">Network_Core</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Sovereign Strip (BottomNavBar implementation) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-slate-900/80 backdrop-blur-3xl border-t border-white/10 shadow-[0_-10px_40px_rgba(79,70,229,0.1)]">
+<!-- Start Button -->
+<div class="flex items-center">
+<button class="w-12 h-12 bg-indigo-600/20 text-indigo-400 rounded-xl flex items-center justify-center hover:bg-indigo-600/30 transition-all active:scale-95">
+<span class="font-headline text-2xl font-black">V</span>
+</button>
+</div>
+<!-- Center Active Tools -->
+<div class="flex items-center space-x-1 sm:space-x-8">
+<div class="flex flex-col items-center relative group cursor-pointer">
+<div class="p-2 text-indigo-400">
+<span class="material-symbols-outlined text-2xl">terminal</span>
+</div>
+<div class="absolute -bottom-1 w-6 h-0.5 bg-indigo-400 shadow-[0_0_8px_rgba(129,140,248,0.8)] rounded-full"></div>
+</div>
+<div class="flex flex-col items-center relative group cursor-pointer">
+<div class="p-2 text-indigo-400">
+<span class="material-symbols-outlined text-2xl">monitoring</span>
+</div>
+<div class="absolute -bottom-1 w-6 h-0.5 bg-indigo-400 shadow-[0_0_8px_rgba(129,140,248,0.8)] rounded-full"></div>
+</div>
+<div class="flex flex-col items-center relative group cursor-pointer">
+<div class="p-2 text-indigo-400">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+</div>
+<div class="absolute -bottom-1 w-6 h-0.5 bg-indigo-400 shadow-[0_0_8px_rgba(129,140,248,0.8)] rounded-full"></div>
+</div>
+<!-- Inactive tool in dock -->
+<div class="flex flex-col items-center relative group cursor-pointer opacity-40 hover:opacity-100 transition-opacity">
+<div class="p-2 text-slate-400">
+<span class="material-symbols-outlined text-2xl">folder</span>
+</div>
+</div>
+</div>
+<!-- Status/Shield Right Side -->
+<div class="flex items-center space-x-4">
+<div class="flex items-center space-x-2 bg-indigo-600/5 px-3 py-1.5 rounded-full border border-white/5">
+<span class="material-symbols-outlined text-indigo-400 text-[18px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-mono text-[10px] text-indigo-400 tracking-tighter uppercase">SEC_ACTIVE</span>
+</div>
+<div class="p-2 text-slate-500 hover:text-indigo-400 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-2xl">settings_suggest</span>
+</div>
+</div>
+</nav>
+<!-- Subtle Scanline Effect Overlay -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[100]" style="background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); background-size: 100% 2px, 3px 100%;"></div>
+</body></html>

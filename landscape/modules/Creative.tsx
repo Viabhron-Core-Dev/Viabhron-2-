@@ -15,7 +15,7 @@ import {
   Cpu,
   MousePointer2
 } from 'lucide-react';
-import { UIMode } from '../../types';
+import { UIMode } from '../../src/types';
 
 interface WorkflowNode {
   id: string;

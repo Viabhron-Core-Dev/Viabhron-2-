@@ -96,3 +96,18 @@ export class SovereignPulseFeed {
     return { id: doc.id, ...doc.data() } as PulseBriefing;
   }
 }
+
+import { Zap } from 'lucide-react';
+import { Extension } from '../../../src/types';
+
+export const sovereignPulseFeedConnector: Extension = {
+  id: 'sovereign-pulse-feed',
+  name: 'Sovereign Pulse Feed',
+  description: 'Aggregated intelligence stream from all OS divisions.',
+  icon: Zap,
+  category: 'connector',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export default SovereignPulseFeed;

@@ -13,7 +13,7 @@ import {
   Sparkles,
   Zap
 } from 'lucide-react';
-import { UIMode } from '../../types';
+import { UIMode } from '../../src/types';
 
 export function SoundForge({ uiMode }: { uiMode?: UIMode }) {
   const [isGenerating, setIsGenerating] = useState(false);

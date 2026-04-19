@@ -16,6 +16,8 @@ import {
   AlertCircle
 } from 'lucide-react';
 
+import { UIMode } from '../../src/types';
+
 interface MossApp {
   id: string;
   name: string;
@@ -27,7 +29,7 @@ interface MossApp {
   category: string;
 }
 
-export const MossSystem: React.FC<{ uiMode: 'browser' | 'desktop' }> = ({ uiMode }) => {
+export const MossSystem: React.FC<{ uiMode?: UIMode }> = ({ uiMode }) => {
   const [mossApps, setMossApps] = useState<MossApp[]>([
     {
       id: 'm1',

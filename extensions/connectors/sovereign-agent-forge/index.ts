@@ -62,4 +62,17 @@ export class SovereignAgentForge {
   }
 }
 
+import { Cpu } from 'lucide-react';
+import { Extension } from '../../../src/types';
+
+export const sovereignAgentForgeConnector: Extension = {
+  id: 'sovereign-agent-forge',
+  name: 'Sovereign Agent Forge',
+  description: 'Autonomous agent design and deployment substrate.',
+  icon: Cpu,
+  category: 'connector',
+  status: 'active',
+  source: 'inbuilt'
+};
+
 export const agentForge = new SovereignAgentForge();

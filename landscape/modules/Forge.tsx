@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { UIMode } from '../../types';
+import { UIMode } from '../../src/types';
 import { 
   FileCode, 
   Save, 

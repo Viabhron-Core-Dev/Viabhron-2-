@@ -59,3 +59,18 @@ export class SovereignInteractionSubstrate {
     }
   }
 }
+
+import { Network } from 'lucide-react';
+import { Extension } from '../../../src/types';
+
+export const sovereignInteractionSubstrateConnector: Extension = {
+  id: 'sovereign-interaction-substrate',
+  name: 'Interaction Substrate',
+  description: 'Zero-trust user interaction and notification layer.',
+  icon: Network,
+  category: 'connector',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export default SovereignInteractionSubstrate;

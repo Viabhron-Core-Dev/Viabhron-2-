@@ -79,4 +79,17 @@ export class WorkspaceBridge {
   }
 }
 
+import { Briefcase } from 'lucide-react';
+import { Extension } from '../../../src/types';
+
+export const workspaceBridgeConnector: Extension = {
+  id: 'workspace-bridge',
+  name: 'Workspace Bridge',
+  description: 'Bidirectional bridge for enterprise productivity tools.',
+  icon: Briefcase,
+  category: 'connector',
+  status: 'active',
+  source: 'inbuilt'
+};
+
 export default WorkspaceBridge;

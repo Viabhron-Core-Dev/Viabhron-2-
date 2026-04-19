@@ -120,3 +120,33 @@ export const visualSynthesizerAgent: Extension = {
   status: 'active',
   source: 'inbuilt'
 };
+
+export const nexusLibrarianAgent: Extension = {
+  id: 'nexus-librarian',
+  name: 'The Nexus Librarian',
+  description: 'Narrative synthesis and data trading within the Viabhron Nexus.',
+  icon: Database,
+  category: 'agent',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const diplomatAgent: Extension = {
+  id: 'diplomat-agent',
+  name: 'The Diplomat',
+  description: 'Cross-instance coordination and relationship management.',
+  icon: Globe,
+  category: 'agent',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export const metabolicSecretaryAgent: Extension = {
+  id: 'metabolic-secretary-agent',
+  name: 'The Metabolic Secretary',
+  description: 'Proactive management of OS metabolic rate and budget.',
+  icon: Activity,
+  category: 'agent',
+  status: 'active',
+  source: 'inbuilt'
+};

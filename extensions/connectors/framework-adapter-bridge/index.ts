@@ -78,4 +78,17 @@ export class FrameworkAdapterBridge {
   }
 }
 
+import { Layers } from 'lucide-react';
+import { Extension } from '../../../src/types';
+
+export const frameworkAdapterBridgeConnector: Extension = {
+  id: 'framework-adapter-bridge',
+  name: 'Framework Adapter',
+  description: 'Orchestrates external AI frameworks within the Sovereign Kernel.',
+  icon: Layers,
+  category: 'connector',
+  status: 'active',
+  source: 'inbuilt'
+};
+
 export default FrameworkAdapterBridge;

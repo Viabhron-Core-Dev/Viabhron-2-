@@ -18,7 +18,16 @@
     --wa-received: #F0F2F5;
     --wa-accent: #7C3AED; /* Omega FAB color */
     --wa-secondary: #5D5FEF;
+    --primary: #3B82F6;
+    --secondary: #6366F1;
   }
+
+  .bg-primary { background-color: var(--primary); }
+  .text-primary { color: var(--primary); }
+  .border-primary { border-color: var(--primary); }
+  .bg-secondary { background-color: var(--secondary); }
+  .text-secondary { color: var(--secondary); }
+  .border-secondary { border-color: var(--secondary); }
 
   .bg-wa-dark { background-color: var(--wa-dark-bg); }
   .bg-wa-header { background-color: var(--wa-header); }
@@ -91,5 +100,16 @@
   
   .node-shadow {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
   }
 }

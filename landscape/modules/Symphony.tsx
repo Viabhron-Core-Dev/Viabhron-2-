@@ -15,7 +15,7 @@ import {
   ShieldCheck,
   ListTodo
 } from 'lucide-react';
-import { UIMode, BackgroundTask, LogEntry } from '../../types';
+import { UIMode, BackgroundTask, LogEntry } from '../../src/types';
 
 interface SymphonyRun {
   id: string;

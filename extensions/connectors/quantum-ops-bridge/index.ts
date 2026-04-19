@@ -69,4 +69,17 @@ export class QuantumOpsBridge {
   }
 }
 
+import { Zap } from 'lucide-react';
+import { Extension } from '../../../src/types';
+
+export const quantumOpsBridgeConnector: Extension = {
+  id: 'quantum-ops-bridge',
+  name: 'Quantum Ops Bridge',
+  description: 'Hybrid quantum-classical orchestration and PQC shielding.',
+  icon: Zap,
+  category: 'connector',
+  status: 'active',
+  source: 'inbuilt'
+};
+
 export default QuantumOpsBridge;

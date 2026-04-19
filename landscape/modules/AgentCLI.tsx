@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { UIMode } from '../../types';
+import { UIMode } from '../../src/types';
 import { 
   Terminal as TerminalIcon, 
   Play, 

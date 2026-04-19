@@ -14,7 +14,7 @@ import {
   Search,
   Filter
 } from 'lucide-react';
-import { UIMode } from '../../types';
+import { UIMode } from '../../src/types';
 
 interface NexusStory {
   id: string;

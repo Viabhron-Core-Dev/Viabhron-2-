@@ -1,12 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Terminal as TerminalIcon, X, Maximize2, Minimize2, Command } from 'lucide-react';
+import { UIMode } from '../../src/types';
 
 interface TerminalProps {
   onClose: () => void;
+  uiMode?: UIMode;
 }
 
-export const Terminal: React.FC<TerminalProps> = ({ onClose }) => {
+export const Terminal: React.FC<TerminalProps> = ({ onClose, uiMode }) => {
   const [logs, setLogs] = useState([
     { id: '1', type: 'system', content: 'Viabhron Terminal v1.0.4', timestamp: new Date() },
     { id: '2', type: 'system', content: 'Secure session established.', timestamp: new Date() }

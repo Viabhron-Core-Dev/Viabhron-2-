@@ -68,4 +68,17 @@ export class SovereignAcademyBridge {
   }
 }
 
+import { Book } from 'lucide-react';
+import { Extension } from '../../../src/types';
+
+export const sovereignAcademyBridgeConnector: Extension = {
+  id: 'sovereign-academy-bridge',
+  name: 'Sovereign Academy',
+  description: 'Specialized educational substrate for training agents and users.',
+  icon: Book,
+  category: 'connector',
+  status: 'active',
+  source: 'inbuilt'
+};
+
 export default SovereignAcademyBridge;

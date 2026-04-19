@@ -30,7 +30,7 @@ interface CanvasProps {
   tabId: string;
   userId?: string;
   initialData?: { nodes: CanvasNode[]; edges: CanvasEdge[] };
-  onUpdate: (data: { nodes: CanvasNode[]; edges: CanvasEdge[] }) => void;
+  onUpdate?: (data: { nodes: CanvasNode[]; edges: CanvasEdge[] }) => void;
   viewMode?: 'design' | 'logic';
   onViewModeChange?: (mode: 'design' | 'logic') => void;
   uiMode?: UIMode;
@@ -103,8 +103,10 @@ export const Canvas: React.FC<CanvasProps> = ({
   const lastTap = useRef<number>(0);
 
   useEffect(() => {
-    onUpdate({ nodes, edges });
-  }, [nodes, edges]);
+    if (onUpdate) {
+      onUpdate({ nodes, edges });
+    }
+  }, [nodes, edges, onUpdate]);
 
   const handleAddNode = (type: CanvasNode['type']) => {
     saveToHistory();

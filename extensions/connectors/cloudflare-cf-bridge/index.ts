@@ -82,4 +82,17 @@ export class CloudflareCFBridge {
   }
 }
 
+import { Cloud } from 'lucide-react';
+import { Extension } from '../../../src/types';
+
+export const cloudflareCfBridgeConnector: Extension = {
+  id: 'cloudflare-cf-bridge',
+  name: 'Cloudflare Infra-as-Agent',
+  description: 'Provisions and manages edge infrastructure as autonomous agents.',
+  icon: Cloud,
+  category: 'connector',
+  status: 'active',
+  source: 'inbuilt'
+};
+
 export default CloudflareCFBridge;

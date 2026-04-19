@@ -87,3 +87,18 @@ export class SovereignSocialSandbox {
     }
   }
 }
+
+import { MessageCircle } from 'lucide-react';
+import { Extension } from '../../../src/types';
+
+export const sovereignSocialSandboxConnector: Extension = {
+  id: 'sovereign-social-sandbox',
+  name: 'Sovereign Social Sandbox',
+  description: 'Isolated environment for social automation and interaction.',
+  icon: MessageCircle,
+  category: 'connector',
+  status: 'active',
+  source: 'inbuilt'
+};
+
+export default SovereignSocialSandbox;

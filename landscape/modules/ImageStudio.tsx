@@ -13,7 +13,7 @@ import {
   Cpu,
   RefreshCw
 } from 'lucide-react';
-import { UIMode } from '../../types';
+import { UIMode } from '../../src/types';
 
 export function ImageStudio({ uiMode }: { uiMode?: UIMode }) {
   const [isGenerating, setIsGenerating] = useState(false);

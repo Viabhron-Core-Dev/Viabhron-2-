@@ -96,4 +96,17 @@ export class SovereignThreatIntelBridge {
   }
 }
 
+import { Shield } from 'lucide-react';
+import { Extension } from '../../../src/types';
+
+export const sovereignThreatIntelConnector: Extension = {
+  id: 'sovereign-threat-intel',
+  name: 'Threat Intel Bridge',
+  description: 'Ingests and resonance-filters security advisories from MITRE ATT&CK and ATLAS.',
+  icon: Shield,
+  category: 'connector',
+  status: 'active',
+  source: 'inbuilt'
+};
+
 export default SovereignThreatIntelBridge;

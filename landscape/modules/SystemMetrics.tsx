@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { UIMode } from '../../types';
+import { UIMode } from '../../src/types';
 
 const data = [
   { time: '00:00', cpu: 12, mem: 45, tokens: 1200 },
